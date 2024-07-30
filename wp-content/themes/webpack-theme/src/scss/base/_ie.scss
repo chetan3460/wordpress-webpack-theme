@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as globVar;
+
+.no-support {
+  background-color: globVar.$color-black-50;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  color: globVar.$color-white;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  a {
+    color: globVar.$color-white;
+    text-decoration: underline;
+  }
+}

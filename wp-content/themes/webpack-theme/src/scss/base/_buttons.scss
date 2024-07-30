@@ -1,0 +1,77 @@
+@use "../mixins/" as mix;
+
+.site-btn,
+.btn {
+    // Btn Settings
+    --_btn-background: var(--themePrimary);
+    --_btn-color: var(--dark);
+    --_btn_radius: 0;
+    --_btn-border: 0;
+    --_btn-outline: 1px solid transparent;
+    --_btn_blockpadding: #{mix.rem(15px)};
+    --_btn_inlinepadding: #{mix.rem(30px)};
+    --_btn_transitiontime: 0.35s;
+    --_btn_transitiontype: ease-in-out;
+    --_btn-shadow: none;
+    --_btn-texttransform : uppercase;
+    --_btn-fontsize: #{mix.rem(14px)};
+    --_btn-lineheight: normal;
+    --_btn-weight: 400;
+
+    // Cosmetics
+    background-color: var(--_btn-background);
+    color: var(--_btn-color);
+    border: var(--_btn-border);
+    outline: var(--_btn-outline);
+    text-align: center;
+    cursor: pointer;
+    font-size: var(--_btn-fontsize);
+    line-height: var(--_btn-lineheight);
+    font-weight: var(--_btn-weight);
+    border-radius: var(--_btn_radius);
+    box-shadow: var(--_btn-shadow);
+    padding-inline: var(--_btn_inlinepadding);
+    padding-block: var(--_btn_blockpadding);
+    text-transform: var(--_btn-texttransform);
+    transition: all var(--_btn_transitiontime) var(--_btn_transitiontype);
+
+    // Hover,focus,active states
+    @include mix.states {
+        --_btn-outline: 1px solid var(--themePrimary);
+        --_btn-color: var(--themePrimary);
+        --_btn-background: var(--white);
+    }
+
+    // Variations
+
+    &--arrow {
+        // Arrow
+        --_btn_blockpadding: #{mix.rem(10px)};
+        --_btn_inlinepadding: #{mix.rem(21px)} #{mix.rem(14px)};
+
+        &:after {
+            --_btn-arrow: url("data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 6.81641H15.2177' stroke='%23000E2A' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M9.40234 1L15.2187 6.81633L9.40234 12.6327' stroke='%23000E2A' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+            content: '';
+            display: inline-flex;
+            background-image: var(--_btn-arrow);
+            width: mix.rem(14px);
+            height: mix.rem(11px);
+            margin-inline-start: mix.rem(8px);
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: all var(--_btn_transitiontime) var(--_btn_transitiontype);
+        }
+
+        @include mix.states {
+            &:after {
+                --_btn-arrow: url("data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 6.81641H15.2177' stroke='%23CEAD72' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M9.40234 1L15.2187 6.81633L9.40234 12.6327' stroke='%23CEAD72' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+            }
+        }
+    }
+
+    &--dark {
+        --_btn-background: var(--dark);
+        --_btn-color: var(--white);
+    }
+
+}

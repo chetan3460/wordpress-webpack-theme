@@ -1,0 +1,1 @@
+<div class="w-12 h-12 rounded-full animate-spin m-auto mt-5 border-4 border-solid border-darkblue border-t-transparent loader hidden"></div>

@@ -1,0 +1,304 @@
+@use "../abstracts/variables" as globVar;
+@use "../mixins/" as mix;
+
+/* Site Loader */
+.site-loader {
+  display: none;
+  background: globVar.$color-white;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  @include mix.transition(width 0.6s globVar.$transitionEffect);
+  &.anim {
+    width: 25%;
+  }
+}
+
+.logo-middle {
+  display: none;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  top: calc(50% - 100px);
+  width: 230px;
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+
+
+.landscape-alert {
+  @include mix.landscape {
+    display: block;
+  }
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: globVar.$color-white;
+  left: 0;
+  top: 0;
+  text-align: center;
+  z-index: 9999;
+  display: none;
+  padding: 20% 10% 0;
+  overflow: hidden;
+  p {
+    font-size: 16px;
+    line-height: 26px;
+    color: globVar.$color-black;
+  }
+  span {
+    margin-top: 10px;
+    display: inline-block;
+    border: 1px solid globVar.$color-black;
+    padding: 5px 10px;
+  }
+}
+
+/* text selection color */
+::selection {
+  background: #000;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+
+header {
+  // Mobile Menu
+  &.top{
+    .bg-darkblue{
+     box-shadow: 0 0px 25px 0 rgba(0, 0, 0, 0.3);
+    }
+  }
+  
+}
+
+
+  .mobile-menu {
+    cursor: pointer;
+    height: mix.rem(50);
+    width: mix.rem(50);
+    right: mix.rem(20);
+    position: absolute;
+    @include mix.transition(left 0.6s ease);
+    &.active {
+      &:hover .nav-icon::before,
+      &:hover .nav-icon::after {
+        background: #fff;
+      }
+      .nav-icon {
+        @include mix.transition(background 0.6s ease);
+        background: transparent;
+        &::before,
+        &::after {
+          top: 0;
+          @include mix.transition(transform 0.3s ease);
+        }
+        &::before {
+          @include mix.transform(rotate3d(0, 0, 1, 45deg));
+        }
+        &::after {
+          @include mix.transform(rotate3d(0, 0, 1, -45deg));
+        }
+      }
+    }
+  }
+
+  .nav-icon,
+  .nav-icon::before,
+  .nav-icon::after {
+    background: #fff;
+    display: inline-block;
+    width: 73%;
+    height: 1.5px;
+    border-radius: 20px;
+    @include mix.transition(all 0.3s ease);
+  }
+
+  .nav-icon {
+    position: relative;
+    height: 0;
+    right: mix.rem(-12);
+    top:mix.rem(6);
+    &::before,
+    &::after {
+      position: absolute;
+      left: 0;
+      content: '';
+      transform-origin: 50% 50% 0;
+      -webkit-transform-origin: 50% 50% 0;
+      -moz-transform-origin: 50% 50% 0;
+    }
+    &::before {
+      top: 4px;
+    }
+    &::after {
+      top: -4px;
+    }
+  }
+
+// Mobile menu
+
+.mobile-nav {
+  @apply fixed h-screen p-5  left-0 top-0 bg-white w-full z-[59] duration-700 transition-all [clip-path:polygon(0_0,0_0,0_100%,0_100%)] invisible [&.active]:[clip-path:polygon(0_0,100%_0%,100%_100%,0_100%)] [&.active]:visible;
+  .mobile-menu-list{
+    @apply h-[calc(100svh-160px)] overflow-scroll pb-5;
+  }
+  .mobile-menu-list > ul > li{
+    @apply border-b-[1px]  border-black/10;
+  }
+  .mobile-menu-list > ul > li .nav-item{
+    @apply flex justify-between items-center;
+  }
+  .mobile-menu-list > ul > li > .nav-item > a{
+    @apply text-[1.6rem] font-medium  py-5 block  pr-8 transition-all duration-700;
+  }
+  .mobile-menu-list > ul > li > .nav-item > span{
+    @apply transition-all duration-700
+  }
+  .mobile-menu-list > ul > li.active > .nav-item > a{
+    @apply text-orange;
+  }
+  .mobile-menu-list > ul > li.active > .nav-item > span{
+    @apply rotate-180 text-orange;
+  }
+  .mobile-menu-list > ul > li > ul{
+    @apply pb-8 space-y-6 text-xl font-medium pl-5 hidden;
+  }
+  .mobile-menu-list > ul > li > ul > li > .nav-item > span{
+     @apply rotate-[270deg] text-[0.75rem] relative right-0;
+  }
+  .sub-nav-wrap{
+    @apply absolute w-full bg-white h-[calc(100%-4.25rem)] left-0 px-5 pt-10 pb-12 z-20 bottom-0 transition-all duration-700 [clip-path:polygon(0_0,0_0,0_100%,0_100%)] invisible [&.active]:[clip-path:polygon(0_0,100%_0%,100%_100%,0_100%)] [&.active]:visible;
+    h3{
+      @apply text-2xl text-orange block border-t-[1px] pt-5 mt-5   border-black/10
+    }
+    ul > li{
+      @apply border-b-[1px]  border-black/10;
+      a{
+        @apply text-xl font-medium  py-5 block  pr-8;
+      }
+      span{
+        @apply text-[0.75rem];
+      }
+    }
+  }
+  .enq-block{
+    @apply absolute bottom-20 w-full left-0 p-5;
+    .primary-btn{
+      @apply justify-center items-center m-auto w-auto;
+      .btn-text{
+        @apply w-[calc(100%-2.68rem)] text-center;
+      }
+    }
+  }
+  .mobile-menu{
+    @apply -right-2.5;
+    .nav-icon{
+      &:after,&::before{
+        @apply bg-darkblue;
+      }
+    }
+  }
+}
+
+body{
+    &:not(.mobile-tablet-device){
+      .mobile-nav{
+        @apply hidden;
+      }
+    }
+}
+
+body.mobile-tablet-device{
+      #menu-main-menu-header-1{
+        @apply hidden;
+      }
+}
+
+body{
+  .mobile-nav{
+    @include mix.breakpoint(1200){
+      display: block !important;
+    }
+  }
+}
+
+
+
+// Animation
+.fade-down {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 0;
+}
+
+.fade-left {
+  transform: translateX(-60px);
+  opacity: 0;
+}
+
+.fade-up {
+  transform: translateY(40px);
+  opacity: 0;
+}
+
+.fade-up-stagger {
+  transform: translateY(40px);
+  opacity: 0;
+}
+
+.fade-right-stagger {
+  transform: translateX(60px);
+  opacity: 0;
+}
+
+.line{
+  @apply translate-y-[50%] opacity-0;
+}
+
+// Lazy
+
+.lazy-image,
+.lazy-video {
+  @apply transition-opacity duration-700 opacity-0;
+  &.loaded {
+    @apply opacity-100;
+  }
+}
+
+
+
+// height media queries
+@include mix.min-breakpoint(1200){
+  html{
+    @include mix.heightBreakpoint(750){
+          font-size: 15px;
+    }
+  }
+  body{
+    .banner-block{
+      .left-block{
+        @include mix.heightBreakpoint(860){
+          @apply gap-10;
+        }
+        @include mix.heightBreakpoint(800){
+          @apply gap-5;
+        }
+      }
+    }
+  }
+}
+
+

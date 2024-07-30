@@ -1,0 +1,48 @@
+@use "sass:math";
+@use "@sass-collective/strip-unit";
+
+// For font sizes
+$browser-context: 16;
+// font-size: em(16px)
+// font-size: em(16)
+@function em($pixels, $context: $browser-context) {
+    $value: strip-unit.strip($pixels);
+    $result: math.div($value, $context);
+    @return #{$result}em;
+}
+
+
+@function rem($val) {
+    $rem : math.div($val, $browser-context) + rem;
+    @return $rem;
+}
+
+@function lh($fontSize, $lineHeight) {
+  @return #{calc(strip-unit.strip($lineHeight) / strip-unit.strip($fontSize))};
+}
+
+@function vh($px-vh, $base-vh: 900px) {
+  @return calc(100 * (strip-unit.strip($px-vh) / strip-unit.strip($base-vh)));
+}
+
+@function vw($px-vw, $base-vw: 1440px) {
+  @return calc((strip-unit.strip($px-vw) * 100vw) / strip-unit.strip($base-vw));
+}
+
+@function cl($px, $min: 0, $max: 0) {
+  @if $min !=0 and $max ==0 {
+    @return clamp(rem($min), vw($px), vw($px));
+  }
+
+  @else if $min ==0 and $max !=0 {
+    @return clamp(rem($px), vw($px), rem($max));
+  }
+
+  @else if $min !=0 and $max !=0 {
+    @return clamp(rem($min), vw($px), rem($max));
+  }
+
+  @else {
+    @return clamp(rem($px), vw($px), vw($px));
+  }
+}

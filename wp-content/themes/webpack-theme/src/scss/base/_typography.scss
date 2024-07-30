@@ -1,0 +1,61 @@
+@use "../abstracts/variables" as globVar;
+@use "../mixins/" as mix;
+
+%block-margins {
+  margin: 1em 0;
+}
+
+%heading-margins {
+  margin: 1em 0 0.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+/* headings */
+h1 {
+  font-size: mix.em(66);
+  line-height: 1.1;
+  @extend %heading-margins;
+}
+h2 {
+  font-size: mix.em(46);
+  line-height: 1.1;
+  @extend %heading-margins;
+}
+h3 {
+  font-size: mix.em(36);
+  line-height: 1.3;
+  @extend %heading-margins;
+}
+h4 {
+  font-size: mix.em(30);
+  line-height: 1.3;
+  @extend %heading-margins;
+}
+h5 {
+  font-size: mix.em(26);
+  line-height: 1;
+  @extend %heading-margins;
+}
+h6 {
+  font-size: mix.em(18);
+  line-height: 1;
+  @extend %heading-margins;
+}
+
+// Others
+p, ul, ol, pre {
+  @extend %block-margins;
+}
+
+p {
+  font-size: mix.em(14);
+  color: inherit;
+  line-height: 1;
+}
+
+p{
+  font-size: mix.rem(16);
+}

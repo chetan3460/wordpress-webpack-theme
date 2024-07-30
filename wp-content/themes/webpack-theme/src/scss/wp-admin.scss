@@ -1,0 +1,85 @@
+.wp-admin {
+    .acf-tooltip {
+        li {
+            position: relative;
+
+            a {
+                padding-left: 30px;
+
+                &:after {
+                    content: '';
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    top: 3px;
+                    left: 5px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    transition: all 0.3s ease;
+                }
+
+                &:hover:after {
+                    width: 300px;
+                    height: 300px;
+                    left: -300px;
+                    top: 0;
+                    background-position: center top;
+                }
+
+                // Define a map for data-layout and image paths
+                $layouts: (
+                    "slider_banner": '../../assets/images/cms-icons/slider_banner.jpg',
+                    "about_us": '../../assets/images/cms-icons/about_us.jpg',
+                    "image_group": '../../assets/images/cms-icons/image_group.jpg',
+                    "fullbanner_content": '../../assets/images/cms-icons/sustainable_block.jpg',
+                    "key_numbers": '../../assets/images/cms-icons/key_numbers.jpg',
+                    "progress_slide": '../../assets/images/cms-icons/progress_slide.jpg',
+                    "sectors_block": '../../assets/images/cms-icons/sector.jpg',
+                    "news_block": '../../assets/images/cms-icons/news_block.jpg',
+                    "products_block": '../../assets/images/cms-icons/product_category.jpg',
+                    "info_values": '../../assets/images/cms-icons/expertise.jpg',
+                    "relevant_product": '../../assets/images/cms-icons/relevant_product.jpg',
+                    "available_sectors": '../../assets/images/cms-icons/available_sectors.jpg',
+                    "form_block": '../../assets/images/cms-icons/form_block.jpg',
+                    "downloadable_block": '../../assets/images/cms-icons/downloadable_block.jpg',
+                    "case_studies": '../../assets/images/cms-icons/case_studies.jpg',
+                    "joint_systems": '../../assets/images/cms-icons/joint_systems.jpg',
+                    "solutions_block": '../../assets/images/cms-icons/solutions_block.jpg',
+                    "full_image": '../../assets/images/cms-icons/full_image.jpg',
+                    "teams_slider": '../../assets/images/cms-icons/teams_slider.jpg',
+                    "accreditations": '../../assets/images/cms-icons/accreditations.jpg',
+                    "list_hover": '../../assets/images/cms-icons/list_hover.jpg',
+                    "chart_block": '../../assets/images/cms-icons/chart_block.jpg',
+                    "text_content": '../../assets/images/cms-icons/text_content.jpg',
+                    "list_block": '../../assets/images/cms-icons/list_block.jpg',
+                    "image_wrap_content": '../../assets/images/cms-icons/image_wrap_content.jpg',
+                    "vacancy": '../../assets/images/cms-icons/vacancy.jpg',
+                    "teams": '../../assets/images/cms-icons/teams.jpg',
+                    "latest_news": '../../assets/images/cms-icons/latest_news.jpg',
+                    "latest_events": '../../assets/images/cms-icons/latest_events.jpg',
+                    "two_column_blocks": '../../assets/images/cms-icons/two_column_blocks.jpg',
+                    "tabs_block": '../../assets/images/cms-icons/tabs_block.jpg',
+                    "testimonials": '../../assets/images/cms-icons/testimonials.jpg',
+                    "card_slider": '../../assets/images/cms-icons/card_slider.jpg',
+                    "ticker_text": '../../assets/images/cms-icons/ticker_text.jpg',
+                    "timeline_block": '../../assets/images/cms-icons/timeline_block.jpg',
+                    "content_editor": '../../assets/images/cms-icons/content_editor.jpg',
+                    "quote": '../../assets/images/cms-icons/quote.jpg',
+                    "gallery_block": '../../assets/images/cms-icons/gallery_block.jpg',
+                    "video_block": '../../assets/images/cms-icons/video_block.jpg',
+                    "time_table": '../../assets/images/cms-icons/time_table.jpg',
+                    "product_listing": '../../assets/images/cms-icons/product_listing.jpg',
+
+                );
+
+            // Iterate over each layout and apply background image
+                    @each $layout, $image-path in $layouts {
+                        &[data-layout="#{$layout}"]:after {
+                            background-image: url($image-path);
+                        }
+                    }
+        }
+    }
+}
+}
