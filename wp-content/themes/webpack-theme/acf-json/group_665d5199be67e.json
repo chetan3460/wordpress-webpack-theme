@@ -7013,8 +7013,8 @@
                         },
                         {
                             "key": "field_66b4b4b1dfc08",
-                            "label": "Items",
-                            "name": "items",
+                            "label": "Items_v2",
+                            "name": "items_v2",
                             "aria-label": "",
                             "type": "repeater",
                             "instructions": "",
@@ -7334,5 +7334,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1723119654
+    "modified": 1723120119
 }
