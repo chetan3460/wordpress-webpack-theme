@@ -124,3 +124,16 @@ function populate_acf_select_box_with_gravity_forms($field)
     return $field;
 }
 add_filter('acf/load_field/name=gravity_forms_select', 'populate_acf_select_box_with_gravity_forms');
+
+
+/*
+=============================================================
+1.4 - webp
+=============================================================
+*/
+
+function allow_webp_upload($mimes) {
+    $mimes['webp'] = 'image/webp';
+    return $mimes;
+}
+add_filter('upload_mimes', 'allow_webp_upload');

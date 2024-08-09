@@ -31,48 +31,48 @@ export default class StickyImageBlock {
             trigger: ".sticky-img-block",
             start: "top 70%",
             onEnter: () => {
-                    itemBlocks.each(function() {
-                        const itemOffsetTop = $(this).offset().top;
-                        $(this).attr('data-offset', itemOffsetTop);
-                    });
-                    setTimeout(function(){
-                        itemBlockFirst.find(".desc").slideDown("slow");
-                        ScrollTrigger.refresh();
-                    },400)
+                itemBlocks.each(function () {
+                    const itemOffsetTop = $(this).offset().top;
+                    $(this).attr('data-offset', itemOffsetTop);
+                });
+                setTimeout(function () {
+                    itemBlockFirst.find(".desc").slideDown("slow");
                     ScrollTrigger.refresh();
+                }, 400)
+                ScrollTrigger.refresh();
             }
         });
         let hoverTimeout;
-        itemBlocks.each(function(index, item) {
-            $(item).on("mouseover", function() {
+        itemBlocks.each(function (index, item) {
+            $(item).on("mouseover", function () {
                 clearTimeout(hoverTimeout);
                 hoverTimeout = setTimeout(() => {
-                    if(!$(this).hasClass("active")){
-                            const pTag = $(item).find(".desc");
-                            itemBlocks.removeClass("active");
-                            pTags.slideUp("1000");
-                            $(item).addClass("active");
-                            pTag.slideDown("1000");
-                            images.removeClass("active");
-                            //const itemOffsetTop = $(item).offset().top;
-                            const itemOffsetTop = $(item).data('offset');
-                            const wrapOffsetTop = wrap.offset().top;
-                            const spaceBetween = itemOffsetTop - wrapOffsetTop;
-                            images.eq(index).addClass("active");
-                            gsap.to(imagesList, { y: spaceBetween-135, duration: 0.8 });
-                            ScrollTrigger.refresh();
+                    if (!$(this).hasClass("active")) {
+                        const pTag = $(item).find(".desc");
+                        itemBlocks.removeClass("active");
+                        pTags.slideUp("1000");
+                        $(item).addClass("active");
+                        pTag.slideDown("1000");
+                        images.removeClass("active");
+                        //const itemOffsetTop = $(item).offset().top;
+                        const itemOffsetTop = $(item).data('offset');
+                        const wrapOffsetTop = wrap.offset().top;
+                        const spaceBetween = itemOffsetTop - wrapOffsetTop;
+                        images.eq(index).addClass("active");
+                        gsap.to(imagesList, { y: spaceBetween - 135, duration: 0.8 });
+                        ScrollTrigger.refresh();
                     }
-                 }, 200); // Adjust the delay as needed
+                }, 200); // Adjust the delay as needed
             });
 
-            $(item).on("mouseout", function() {
-                 clearTimeout(hoverTimeout);
+            $(item).on("mouseout", function () {
+                clearTimeout(hoverTimeout);
             });
         });
 
         let timeoutId;
         window.addEventListener("resize", function (e) {
-        clearTimeout(timeoutId);
+            clearTimeout(timeoutId);
             timeoutId = setTimeout(() => {
                 if (!document.body.classList.contains('mobile-tablet-device')) {
                     location.reload();
@@ -81,3 +81,32 @@ export default class StickyImageBlock {
         });
     }
 }
+
+
+function wglShowcaseInit() {
+
+
+    let $showcase_int = jQuery('.interactive-showcase');
+    if ($showcase_int.length) {
+
+        $showcase_int.each(function () {
+            let $this = jQuery(this),
+                content = $this.find('.showcase__item'),
+                active = $this.find('.active');
+
+            content.on('mouseenter', function () {
+                let obj = jQuery(this);
+                if (!obj.hasClass('active')) {
+                    content.removeClass('active');
+                    obj.addClass('active');
+                }
+            });
+            if (0 === active.length) {
+                $this.on('mouseleave', function () {
+                    content.removeClass('active');
+                });
+            }
+        })
+    }
+}
+wglShowcaseInit();

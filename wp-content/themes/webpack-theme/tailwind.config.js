@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  content: ["../../**/*.php"],
+  content: ["../../**/*.php", './src/**/*.js'],
   theme: {
     extend: {
       screens: {
@@ -13,16 +13,16 @@ module.exports = {
         '5xl': "2000px",
         '6xl': "2200px",
       },
-       colors: {
+      colors: {
         darkblue: "#012555", //Dark Blue
-        orange:'#FB9E3F' ,
-        darkgray:'#333333', // Dark Gray
-        lightblue:'#E0E8F4',
-        aliceblue:'#F5F8FD', // LIGHT BLUE TYPE 2
-        lavendermist:'#E0E7F4', // LIGHT BLUE TYPE 3
-        lightgray:'#BEC5CF',
-        mercury:'#E5E5E5',
-        mediumblue:'#345177',
+        orange: '#FB9E3F',
+        darkgray: '#333333', // Dark Gray
+        lightblue: '#E0E8F4',
+        aliceblue: '#F5F8FD', // LIGHT BLUE TYPE 2
+        lavendermist: '#E0E7F4', // LIGHT BLUE TYPE 3
+        lightgray: '#BEC5CF',
+        mercury: '#E5E5E5',
+        mediumblue: '#345177',
       },
     },
   },

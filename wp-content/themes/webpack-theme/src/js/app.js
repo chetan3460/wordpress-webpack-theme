@@ -42,6 +42,34 @@ export default new (class App {
 
     new DynamicImports();
     new Animation();
+
+    function wglShowcaseInit() {
+
+
+      let $showcase_int = jQuery('.interactive-showcase');
+      if ($showcase_int.length) {
+
+        $showcase_int.each(function () {
+          let $this = jQuery(this),
+            content = $this.find('.showcase__item'),
+            active = $this.find('.active');
+
+          content.on('mouseenter', function () {
+            let obj = jQuery(this);
+            if (!obj.hasClass('active')) {
+              content.removeClass('active');
+              obj.addClass('active');
+            }
+          });
+          if (0 === active.length) {
+            $this.on('mouseleave', function () {
+              content.removeClass('active');
+            });
+          }
+        })
+      }
+    }
+    wglShowcaseInit();
   };
 
   captchaLoad = () => {
@@ -85,11 +113,11 @@ export default new (class App {
 
     // Search click
     this.searchBtn.on('click', () => {
-            this.searchTopBlock.toggleClass('active');
+      this.searchTopBlock.toggleClass('active');
     });
 
     this.searchCloseBtn.on('click', () => {
-            this.searchTopBlock.toggleClass('active');
+      this.searchTopBlock.toggleClass('active');
     });
 
     // Specific Events
@@ -101,32 +129,32 @@ export default new (class App {
 
 
     // Blue header
-    if($(".no-banner,.error404").length){
+    if ($(".no-banner,.error404").length) {
       this.htmlBody.addClass("blue-header");
     }
 
-     //set cookie for site
-     function setCookie(cname, cvalue) {
-            var d = new Date();
-            d.setTime(d.getTime() + 2160000000);
-            var expires = "expires=" + d.toUTCString();
-            document.cookie = cname + "=" + cvalue + "; " + expires + "; path=/";
-     }
-
-     if (document.cookie.indexOf("visited=") == -1) {
-            $(".cookie-preference .accept").click(function(){
-               setCookie("visited", "1");
-               $('.cookie-preference').fadeOut();
-            })
-            $(".cookie-preference .reject").click(function(){
-               $('.cookie-preference').fadeOut();
-            })
-            setTimeout(() => {
-                $('.cookie-preference').fadeIn();
-            }, 4000);
+    //set cookie for site
+    function setCookie(cname, cvalue) {
+      var d = new Date();
+      d.setTime(d.getTime() + 2160000000);
+      var expires = "expires=" + d.toUTCString();
+      document.cookie = cname + "=" + cvalue + "; " + expires + "; path=/";
     }
-    
-    
+
+    if (document.cookie.indexOf("visited=") == -1) {
+      $(".cookie-preference .accept").click(function () {
+        setCookie("visited", "1");
+        $('.cookie-preference').fadeOut();
+      })
+      $(".cookie-preference .reject").click(function () {
+        $('.cookie-preference').fadeOut();
+      })
+      setTimeout(() => {
+        $('.cookie-preference').fadeIn();
+      }, 4000);
+    }
+
+
 
     this.inputs
       .on({
@@ -151,14 +179,14 @@ export default new (class App {
     this.screenHeight = this.window.height();
 
     // calculate footer height and assign it to wrapper and push/footer div
-    if (this.pushDiv.length){
+    if (this.pushDiv.length) {
       this.footerHeight = this.footer.outerHeight();
       this.wrapper.css('margin-bottom', -this.footerHeight);
       this.pushDiv.height(this.footerHeight);
     }
   };
 
-  
+
 
   windowScroll = () => {
     const topOffset = this.window.scrollTop();
@@ -215,9 +243,9 @@ export default new (class App {
 
     const isIPadPro = /Macintosh/i.test(navigator.userAgent) && 'ontouchend' in document;
     if (isIPadPro) {
-        // Code for iPad Pro
-        this.htmlBody.addClass("mobile-tablet-device");
-        this.htmlBody.addClass("ipad-pro");
-    } 
+      // Code for iPad Pro
+      this.htmlBody.addClass("mobile-tablet-device");
+      this.htmlBody.addClass("ipad-pro");
+    }
   };
 })();

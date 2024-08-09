@@ -3,6 +3,7 @@ $sub_title = get_sub_field('subtitle');
 $heading = get_sub_field('heading');
 $items_v2 = get_sub_field('items_v2');
 $transparent_background = get_sub_field('transparent_background');
+$background_image = get_sub_field('background_image');
 
 $cta = get_sub_field('cta');
 if (!empty($cta)) {
@@ -12,90 +13,90 @@ if (!empty($cta)) {
 // Hiding and cosmetics/
 include(locate_template('template-parts/blocks/hide_cosmetics.php', false, false));
 
-if ($items_v2_v2 && !$hide_block) :
+if ($items_v2 && !$hide_block) :
 ?>
+
+
 
 <?php if (!wp_is_mobile()) { ?>
 
 <section
-    class="sticky-img-block desktop pt-[10rem]  pb-[14rem]  max-md:py-12  fade-in <?= (!$transparent_background) ? 'bg-aliceblue' : '';?>"
-    data-delay="0.2"
+    style="background-image: url('<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/homepage6-5.webp'); ?>');"
+    class="list_hover_v2 desktop py-[6.25rem] px-16 max-xl:px-5 max-md:py-12 max-container fade-in  w-full  bg-[center_center] bg-no-repeat bg-cover bg-fixed"
+    data-delay="0.2" style
     style="<?php if ($padding_top) { ?>padding-top: <?= $padding_top ?>px <?php } ?><?php if ($padding_bottom) { ?>padding-bottom: <?= $padding_bottom ?>px <?php } ?>">
 
     <div class=" w-full   px-16 max-xl:px-5 pb-36">
         <?php if ($sub_title) : ?>
-        <p class="text-xl leading-5 uppercase  max-md:mb-[1rem] mb-5 max-md:text-[1rem]"><?= $sub_title; ?></p>
+        <p class="text-xl leading-5 uppercase  max-md:mb-[1rem] mb-5 max-md:text-[1rem] text-[#7B7B7B]">
+            <?= $sub_title; ?>
+        </p>
         <?php endif; ?>
 
         <?php if ($heading) : ?>
-        <h2 class="text-6xl leading-[4rem] max-md:text-[2.5rem] max-md:leading-[3rem]  font-medium capitalize ">
+        <h2
+            class="text-6xl leading-[4rem] max-md:text-[2.5rem] max-md:leading-[3rem]  font-medium capitalize text-white font-medium">
             <?= $heading; ?></h2>
         <?php endif; ?>
     </div>
-    <div class="wrap relative max-container">
 
 
-        <div
-            class="images-list absolute left-[14vw] 6xl:left-[9vw] -translate-y-28 6xl:w-[22vw] 6xl:h-[26vw] w-[28vw] h-[32vw] bg-white">
-            <?php
-                    foreach ($items_v2 as $item) {
+
+
+
+    <div class="interactive-showcase">
+        <?php foreach ($items_v2 as $key => $item) {
+                        // $link = $item['link'];
+                        $title = $item['title'];
+                        $desc = $item['description'];
                         $thumbnail = $item['image'];
                         if (!$thumbnail) {
                             $thumbnail = get_stylesheet_directory_uri() . '/assets/images/placeholder.jpg';
                         }
-
                     ?>
+        <div
+            class="showcase__item group  transition-all duration-700   flex min-h-[174px] justify-start items-center relative w-full pointer-events-auto pt-[11px] pb-1.5 px-[3.125%] border-solid border-t border-[#FFFFFF33] group">
 
-            <img data-src="<?= $thumbnail['url'] ?>" alt="block image"
-                class="object-cover absolute size-full  left-0 top-0  aspect-[0.875]     lazy-image !opacity-0 [&.active]:!opacity-100 active" />
 
-            <?php  } ?>
 
+            <?php if ($title || $desc) : ?>
+
+
+            <?php if ($title || $desc) : ?>
+
+            <?php if ($title) : ?>
+            <h3 class="showcase__title">
+                <span class="showcase__subtitle">
+                    0<?= $key + 1; ?></span>
+                <span class="title"> <?= $title; ?></span>
+            </h3>
+            <?php endif; ?>
+
+            <?php if ($desc) : ?>
+            <div class="showcase__content overflow-hidden w-[35%] text-white">
+                <p class=" text-base leading-7 max-md:max-w-full    transition-all duration-700 font-medium">
+                    <?= $desc; ?></p>
+            </div>
+            <?php endif; ?>
+
+
+            <div
+                class="showcase__image interactive absolute h-auto left-[var(--wgl-image-position)] z-[4] opacity-0 -translate-y-2/4 origin-[top_center] pointer-events-none overflow-hidden top-2/4">
+
+                <img data-src="<?= $thumbnail['url'] ?>" alt="block image" class=" lazy-image " />
+
+
+
+            </div>
+
+            <?php endif; ?>
+
+            <?php endif; ?>
         </div>
-
-        <div class="list-block">
-            <?php foreach ($items_v2 as $key => $item) {
-                        // $link = $item['link'];
-                        $title = $item['title'];
-                        $desc = $item['description'];
-
-                    ?>
-
-            <a href="javascript:void(0);"
-                class="item-block group px-16 max-xl:px-5 py-10 flex justify-between  transition-all duration-700 delay-0 [&.active]:bg-darkblue cursor-default">
-
-                <p class="text-xl leading-6 transition-all duration-700 text-black group-[&.active]:text-white">
-                    0<?= $key + 1; ?></p>
-                <?php if ($title || $desc) : ?>
-                <div class="content-wrap relative w-[45vw] 6xl:w-[40vw]">
-                    <?php if ($title || $desc) : ?>
-                    <div class="content pr-[9.5vw]">
-                        <?php if ($title) : ?>
-                        <h2
-                            class="text-4xl leading-10 max-md:max-w-full pr-10 transition-all duration-700 text-black group-[&.active]:text-white capitalize">
-                            <?= $title; ?> </h2>
-                        <?php endif; ?>
-                        <?php if ($desc) : ?>
-                        <div class="desc overflow-hidden">
-                            <p
-                                class=" text-base leading-5 max-md:max-w-full opacity-80 text-white group-[&.active]:mt-5 transition-all duration-700">
-                                <?= $desc; ?></p>
-                        </div>
-                        <?php endif; ?>
-                    </div>
-                    <?php endif; ?>
-                    <!-- <div class="primary-btn white absolute pointer-events-none top-0 right-0  opacity-0 transition-all duration-700 delay-100 group-[&.active]:opacity-100">
-                                        <span class="btn-arrow">
-                                            <span class="icon-arrow-right"></span>
-                                        </span>
-                                    </div> -->
-                </div>
-                <?php endif; ?>
-            </a>
-            <?php } ?>
-        </div>
-
+        <?php } ?>
     </div>
+
+
     <?php  if ($cta) : ?>
     <div class="flex justify-center w-full mt-20 max-md:mt-10">
 
@@ -105,11 +106,13 @@ if ($items_v2_v2 && !$hide_block) :
 
     </div>
     <?php endif; ?>
+
+
 </section>
 <?php } else { ?>
 
 
-<section class="img-content-block mob-tablet py-[6.25rem] max-md:py-12 px-16 max-xl:px-5  fade-in  flex-col gap-20">
+<section class="img-content-block mob-tablet py-[6.25rem] max-md:py-12 px-16 max-xl:px-5  fade-in  flex-col gap-20 ">
     <?php
             foreach ($items_v2 as $key => $item) {
                 $thumbnail = $item['image'];
