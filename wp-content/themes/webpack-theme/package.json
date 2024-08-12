@@ -46,9 +46,11 @@
     "bootstrap": "^5.2.3",
     "gsap": "file:gsap-bonus.tgz",
     "jquery": "^3.7.1",
+    "lenis": "^1.1.9",
     "load-google-maps-api": "^2.0.2",
     "lottie-web": "^5.12.2",
     "select2": "^4.1.0-rc.0",
+    "split-type": "^0.3.4",
     "swiper": "^11.1.1"
   }
 }

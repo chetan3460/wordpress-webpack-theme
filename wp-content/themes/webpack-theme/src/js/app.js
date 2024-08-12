@@ -5,6 +5,7 @@ import DynamicImports from './components/DynamicImports';
 import Animation from "./components/Animation";
 
 import { inVP } from "./utils";
+import Lenis from 'lenis'
 
 export default new (class App {
   constructor() {
@@ -43,6 +44,7 @@ export default new (class App {
     new DynamicImports();
     new Animation();
 
+    // TO BE Removed
     function wglShowcaseInit() {
 
 
@@ -70,6 +72,7 @@ export default new (class App {
       }
     }
     wglShowcaseInit();
+
   };
 
   captchaLoad = () => {
@@ -172,6 +175,21 @@ export default new (class App {
         },
       })
       .trigger('blur');
+
+
+
+    const lenis = new Lenis()
+
+    lenis.on('scroll', (e) => {
+      console.log(e)
+    })
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
   };
 
   windowResize = () => {
@@ -248,4 +266,7 @@ export default new (class App {
       this.htmlBody.addClass("ipad-pro");
     }
   };
+
+
+
 })();

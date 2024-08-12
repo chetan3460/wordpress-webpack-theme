@@ -32,12 +32,19 @@ const enquiryFormPopUp = $(".form-pop-up");
 const applyFormPopUp = $(".form-apply-pop-up");
 // Set 'mobile' to false to prevent JS from loading on mobile. Change the media query as desired in DynamicImports.js
 
+
+
+
 //listing
 const relevantProducts = $(".relevant-products");
 const commonListing = $(".common-listing");
 const accreditationsListing = $(".accreditations-list");
 const search = $(".search-page");
 const productListing = $(".product-listing");
+
+
+// Partner Slider
+const partnerSlider = $(".partner-slider");
 
 export const componentList = [
   {
@@ -70,7 +77,7 @@ export const componentList = [
     className: "OverflowSlider",
     mobile: true,
   },
-   {
+  {
     element: sliderOneItemPerView,
     className: "SliderOneItemPerView",
     mobile: true,
@@ -170,7 +177,7 @@ export const componentList = [
     className: "HoverDescSlide",
     mobile: true,
   },
-   {
+  {
     element: selectDrop,
     className: "SelectDrop",
     mobile: true,
@@ -180,7 +187,7 @@ export const componentList = [
     className: "CopyToClipClick",
     mobile: true,
   },
-   {
+  {
     element: certificateSlider,
     className: "CertificateSlider",
     mobile: true,
@@ -223,6 +230,11 @@ export const componentList = [
   {
     element: productListing,
     className: "ProductListing",
+    mobile: true,
+  },
+  {
+    element: partnerSlider,
+    className: "PartnerSlider",
     mobile: true,
   },
 ];

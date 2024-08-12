@@ -1,3 +1,4 @@
+<!-- List Hover V2 -->
 <?php
 $sub_title = get_sub_field('subtitle');
 $heading = get_sub_field('heading');
@@ -26,6 +27,7 @@ if ($items_v2 && !$hide_block) :
     data-delay="0.2" style
     style="<?php if ($padding_top) { ?>padding-top: <?= $padding_top ?>px <?php } ?><?php if ($padding_bottom) { ?>padding-bottom: <?= $padding_bottom ?>px <?php } ?>">
 
+    <!-- Heading & CTA -->
     <div class=" w-full max-xl:px-5 pb-16 flex md:flex-row flex-col justify-between">
         <div class=" ">
             <?php if ($sub_title) : ?>
@@ -79,10 +81,12 @@ if ($items_v2 && !$hide_block) :
 
             <?php if ($title || $desc) : ?>
 
+            <!-- Link -->
             <?php if ($item_link): ?>
             <a href="<?= esc_url($item_link); ?>" class="absolute inset-0 z-20"></a> <!-- Full cover link -->
             <?php endif; ?>
 
+            <!-- Title -->
             <?php if ($title) : ?>
             <h3
                 class="showcase__title || relative   md:flex-row flex-col flex-grow  inline-flex md:items-center items-start md:text-4xl text-[1.7em] leading-[1.25em] tracking-tight font-medium  whitespace-normal lg:pr-[13rem] pr-0 lg:w-1/2 max-lg:w-full  xxl:pb-0 max-lg:pb-4  transform translate-x-0 lg:group-hover:translate-x-[6.5em] group-hover:translate-x-0 lg:group-[&.active]:translate-x-[6.5em] transition-all duration-[0.8s] z-10 ">
@@ -94,6 +98,7 @@ if ($items_v2 && !$hide_block) :
             </h3>
             <?php endif; ?>
 
+            <!-- Description -->
             <?php if ($desc) : ?>
             <div
                 class="showcase__content overflow-hidden w-[35%] max-lg:w-full text-white max-lg:mb-0 transition-all duration-[0.4s] transform translate-x-0">
@@ -117,10 +122,6 @@ if ($items_v2 && !$hide_block) :
         </div>
         <?php } ?>
     </div>
-
-
-
-
 
 </section>
 

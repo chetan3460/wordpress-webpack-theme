@@ -1011,3 +1011,118 @@ h6 {
     @apply max-md:hidden;
   }
 }
+
+// Lenis
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+//$container-width: 172.8rem;
+$container-width: 192rem; //resolve in 192x12.5px(fontsize) = 2400px
+.home-part {
+  background-color: #eaeef0;
+  padding-top: 14.6rem;
+  padding-bottom: 15rem;
+  &__head {
+    grid-column: 5/13;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10rem;
+    max-width: 74rem;
+    justify-self: center;
+  }
+  &__label {
+    color: #9a9a9a;
+    margin-bottom: 2rem;
+  }
+  &__title {
+    //margin-bottom: 6rem;
+  }
+  &__btn {
+    margin-top: 3.2rem;
+  }
+  &__main {
+    grid-column: 1/17;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    &-item {
+      width: calc(100% / 6);
+      border: 1px solid #cfd3d4;
+      margin-bottom: -1px;
+      margin-right: -1px;
+      padding: 2.8rem 1.9rem;
+    }
+    &-supporters {
+      width: 100%;
+      display: block;
+      flex-wrap: nowrap;
+      .home-part {
+        &__marquee {
+          display: block;
+          width: 100%;
+          overflow: hidden;
+          &-wrapper {
+            display: flex;
+            align-items: stretch;
+            flex-wrap: nowrap;
+            will-change: transform;
+            &.--right {
+              justify-content: start;
+              margin-bottom: -1px;
+            }
+            &.--left {
+              justify-content: end;
+              // .home-part__marquee-item {
+              //     flex-direction: row-reverse;
+              // }
+            }
+          }
+          &-item {
+            display: flex;
+            align-items: stretch;
+            justify-content: start;
+            flex-wrap: nowrap;
+            .home-part__main-item {
+              margin-bottom: 0;
+              width: calc(($container-width - 6rem * 2) / 6);
+            }
+          }
+        }
+      }
+    }
+  }
+  &__investor {
+    grid-column: 1/17;
+    text-align: center;
+    justify-self: center;
+    margin-top: 10rem;
+    color: #9a9a9a;
+    margin-bottom: 6rem;
+    &-title {
+      margin-bottom: 1.2rem;
+    }
+    &-sub {
+      color: #9a9a9a;
+    }
+  }
+}
