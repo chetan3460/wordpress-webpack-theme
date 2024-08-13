@@ -145,6 +145,198 @@ if ($partners_items && !$hide_block) :
 
 </section>
 
+<section class="wgl_cpt_section">
+    <div class="wgl-portfolio portfolio_header-inline" id="portfolio_module_668d106aad6e6">
+        <div class="wgl-portfolio_header sticky-sidebar  bd-position-sticky">
+            <div class="item_title column two">
+                <div class="portfolio_subtitle">(LATEST WORKS)</div>
+                <h3 class="portfolio_title">Our Cases</h3>
+                <div class="portfolio_header-button">
+                    <a class="wgl-button btn-size-xl" href="https://wgl-dsites.net/motto/portfolio-grid/">
+                        <div class="button__content">VIEW ALL PROJECTS</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="wgl-portfolio_wrapper">
+            <div class="wgl-portfolio_container container-grid row grid-2">
+
+                <article class="portfolio__item item design development">
+                    <div class="item__wrapper">
+                        <div class="item__image">
+                            <div class="item__image-wrap">
+                                <img decoding="async"
+                                    src="https://wgl-dsites.net/motto/wp-content/uploads/2023/12/portfolio-s2-1290x1290.jpg"
+                                    alt="">
+                            </div>
+                            <a href="https://wgl-dsites.net/motto/portfolio/eye-vision-agency/"
+                                class="single_link portfolio_link"></a>
+                        </div>
+                        <div class="item__description">
+                            <div class="description__wrapper">
+                                <div class="post_cats">
+                                    <a href=https://wgl-dsites.net/motto/portfolio-category/design/
+                                        class="portfolio-category">design</a>
+                                    <a href=https://wgl-dsites.net/motto/portfolio-category/development/
+                                        class="portfolio-category">development</a>
+                                </div>
+                                <div class="item__title">
+                                    <h5 class="title">
+                                        <a href="https://wgl-dsites.net/motto/portfolio/eye-vision-agency/"
+                                            class="single_link">Eye Vision Agency</a>
+                                    </h5>
+                                </div>
+                                <div class="description_content">
+                                    <div class="content">Company branding goes beyond just a logo; it encompasses the
+                                        values, personality,</div>
+                                </div>
+                            </div>
+                            <div class="description__footer">
+                                <div class="item__date">
+                                    <span class="item__date-title">DATE:</span>
+                                    <span class="item__date-date">December 27, 2023</span>
+                                </div>
+                                <div class="item__button">
+                                    <a href="https://wgl-dsites.net/motto/portfolio/eye-vision-agency/"
+                                        class="single_link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="portfolio__item item development marketing">
+                    <div class="item__wrapper">
+                        <div class="item__image">
+                            <div class="item__image-wrap">
+                                <img decoding="async"
+                                    src="https://wgl-dsites.net/motto/wp-content/uploads/2023/12/portfolio-s3-1290x1290.jpg"
+                                    alt="">
+                            </div>
+                            <a href="https://wgl-dsites.net/motto/portfolio/company-branding/"
+                                class="single_link portfolio_link"></a>
+                        </div>
+                        <div class="item__description">
+                            <div class="description__wrapper">
+                                <div class="post_cats">
+                                    <a href=https://wgl-dsites.net/motto/portfolio-category/development/
+                                        class="portfolio-category">development</a>
+                                    <a href=https://wgl-dsites.net/motto/portfolio-category/marketing/
+                                        class="portfolio-category">marketing</a>
+                                </div>
+                                <div class="item__title">
+                                    <h5 class="title">
+                                        <a href="https://wgl-dsites.net/motto/portfolio/company-branding/"
+                                            class="single_link">Company Branding</a>
+                                    </h5>
+                                </div>
+                                <div class="description_content">
+                                    <div class="content">Company branding goes beyond just a logo; it encompasses the
+                                        values, personality,</div>
+                                </div>
+                            </div>
+                            <div class="description__footer">
+                                <div class="item__date">
+                                    <span class="item__date-title">DATE:</span>
+                                    <span class="item__date-date">December 27, 2023</span>
+                                </div>
+                                <div class="item__button">
+                                    <a href="https://wgl-dsites.net/motto/portfolio/company-branding/"
+                                        class="single_link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="portfolio__item item marketing photography">
+                    <div class="item__wrapper">
+                        <div class="item__image">
+                            <div class="item__image-wrap">
+                                <img decoding="async"
+                                    src="https://wgl-dsites.net/motto/wp-content/uploads/2023/12/portfolio-s10-1290x1290.jpg"
+                                    alt="">
+                            </div>
+                            <a href="https://wgl-dsites.net/motto/portfolio/slow-motion/"
+                                class="single_link portfolio_link"></a>
+                        </div>
+                        <div class="item__description">
+                            <div class="description__wrapper">
+                                <div class="post_cats">
+                                    <a href=https://wgl-dsites.net/motto/portfolio-category/marketing/
+                                        class="portfolio-category">marketing</a>
+                                    <a href=https://wgl-dsites.net/motto/portfolio-category/photography/
+                                        class="portfolio-category">photography</a>
+                                </div>
+                                <div class="item__title">
+                                    <h5 class="title">
+                                        <a href="https://wgl-dsites.net/motto/portfolio/slow-motion/"
+                                            class="single_link">Slow Motion</a>
+                                    </h5>
+                                </div>
+                                <div class="description_content">
+                                    <div class="content">Company branding goes beyond just a logo; it encompasses the
+                                        values, personality,</div>
+                                </div>
+                            </div>
+                            <div class="description__footer">
+                                <div class="item__date">
+                                    <span class="item__date-title">DATE:</span>
+                                    <span class="item__date-date">January 3, 2024</span>
+                                </div>
+                                <div class="item__button">
+                                    <a href="https://wgl-dsites.net/motto/portfolio/slow-motion/"
+                                        class="single_link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="portfolio__item item design development">
+                    <div class="item__wrapper">
+                        <div class="item__image">
+                            <div class="item__image-wrap">
+                                <img decoding="async"
+                                    src="https://wgl-dsites.net/motto/wp-content/uploads/2023/12/portfolio-s13-1290x1290.jpg"
+                                    alt="">
+                            </div>
+                            <a href="https://wgl-dsites.net/motto/portfolio/product-design/"
+                                class="single_link portfolio_link"></a>
+                        </div>
+                        <div class="item__description">
+                            <div class="description__wrapper">
+                                <div class="post_cats">
+                                    <a href=https://wgl-dsites.net/motto/portfolio-category/design/
+                                        class="portfolio-category">design</a>
+                                    <a href=https://wgl-dsites.net/motto/portfolio-category/development/
+                                        class="portfolio-category">development</a>
+                                </div>
+                                <div class="item__title">
+                                    <h5 class="title">
+                                        <a href="https://wgl-dsites.net/motto/portfolio/product-design/"
+                                            class="single_link">Product Design</a>
+                                    </h5>
+                                </div>
+                                <div class="description_content">
+                                    <div class="content">Company branding goes beyond just a logo; it encompasses the
+                                        values, personality,</div>
+                                </div>
+                            </div>
+                            <div class="description__footer">
+                                <div class="item__date">
+                                    <span class="item__date-title">DATE:</span>
+                                    <span class="item__date-date">January 3, 2024</span>
+                                </div>
+                                <div class="item__button">
+                                    <a href="https://wgl-dsites.net/motto/portfolio/product-design/"
+                                        class="single_link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
 <?php
     endif;
  ?>
