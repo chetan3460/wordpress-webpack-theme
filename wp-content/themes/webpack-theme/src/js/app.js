@@ -179,17 +179,22 @@ export default new (class App {
 
 
     const lenis = new Lenis()
-
-    lenis.on('scroll', (e) => {
-      console.log(e)
-    })
-
     function raf(time) {
       lenis.raf(time)
       requestAnimationFrame(raf)
     }
-
     requestAnimationFrame(raf)
+
+    function calculate() {
+      if ($(window).width() - $('.container').width() >= 0) {
+        let scalefactor = $(window).width() / $('.container').width()
+        $('.home-tech__bg-tri-inner').css('transform', `translate(-50%, -50%) scale(${scalefactor})`)
+      }
+      console.log($('.container').outerWidth())
+    }
+    $(window).on('resize', function (e) {
+      calculate()
+    })
   };
 
   windowResize = () => {
