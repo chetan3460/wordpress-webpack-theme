@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import plugin from "tailwindcss/plugin";
 
 module.exports = {
   content: ["../../**/*.php", './src/**/*.js'],
@@ -26,6 +27,23 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography"),],
+  plugins: [
+    require("@tailwindcss/typography"),
+    plugin(({ addVariant, matchVariant }) => {
+      addVariant("active", "&.active", "&.swiper-slide-active"),
+
+        matchVariant("nth", (value) => `&:nth-child(${value})`, {
+          values: {
+            1: "1",
+            2: "2",
+            3: "3",
+            4: "4",
+            5: "5",
+            6: "6",
+          },
+        })
+
+    }),
+  ],
 }
 

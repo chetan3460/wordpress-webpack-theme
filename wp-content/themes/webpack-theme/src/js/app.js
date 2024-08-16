@@ -6,10 +6,7 @@ import Animation from "./components/Animation";
 
 import { inVP } from "./utils";
 import Lenis from 'lenis'
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
 export default new (class App {
   constructor() {
     this.setDomMap();
@@ -75,30 +72,15 @@ export default new (class App {
       }
     }
     wglShowcaseInit();
-    let testInner = window.innerWidth;
-
-    function init() {
-      if (testInner <= 991) {
-        ScrollTrigger.create({
-          trigger: '.bd-position-sticky',
-          start: '-100 top',
-          end: "10% +20px center",
-          pin: '.column.two',
-          pinSpacing: false,
-        })
-      } else {
-        ScrollTrigger.create({
-          trigger: '.bd-position-sticky',
-          start: '-100 top',
-          end: "90% +110px center",
-          pin: '.column.two',
-          pinSpacing: false,
-        })
-      }
-    }
-    window.addEventListener('load', function () {
-      init();
-    });
+    // if (jQuery('.sticky-sidebar').length) {
+    //   jQuery('body').addClass('sticky-sidebar_init');
+    //   jQuery('.sticky-sidebar').each(function () {
+    //     jQuery(this).theiaStickySidebar({
+    //       additionalMarginTop: 150,
+    //       additionalMarginBottom: 30
+    //     });
+    //   });
+    // }
   };
 
   captchaLoad = () => {

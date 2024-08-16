@@ -145,57 +145,73 @@ if ($partners_items && !$hide_block) :
 
 </section>
 
-<section class="wgl_cpt_section">
-    <div class="wgl-portfolio portfolio_header-inline" id="portfolio_module_668d106aad6e6">
-        <div class="wgl-portfolio_header sticky-sidebar  bd-position-sticky">
-            <div class="item_title column two">
-                <div class="portfolio_subtitle">(LATEST WORKS)</div>
-                <h3 class="portfolio_title">Our Cases</h3>
-                <div class="portfolio_header-button">
-                    <a class="wgl-button btn-size-xl" href="https://wgl-dsites.net/motto/portfolio-grid/">
-                        <div class="button__content">VIEW ALL PROJECTS</div>
-                    </a>
+<section class="wgl_cpt_section case-studies-block py-[6.25rem] px-16 max-xl:px-5 max-md:py-12 max-container">
+    <div class="wgl-portfolio portfolio_header-inline lg:flex block -mr-[0.063rem]" id="portfolio_module_668d106aad6e6">
+        <div
+            class="wgl-portfolio_header sticky-sidebar  bd-position-sticky block xxl:w-[33%] max-3xl:w-[calc(25%+1px)] max-lg:w-full  p-16 max-3xl:p-12 max-lg:p-0 max-lg:pb-14 border  border-black max-lg:border-0">
+            <div class="item_title column two w-full min-w-[33%]">
+                <div class="">
+                    <div class="c-button">
+                        <div
+                            class="portfolio_subtitle text-xl leading-5 uppercase  max-md:mb-[1rem] mb-5 max-md:text-[1rem] text-[#7B7B7B]">
+                            (LATEST WORKS)</div>
+                        <h3
+                            class="portfolio_title text-6xl leading-[4rem] max-md:text-[2.5rem] max-md:leading-[3rem]  font-medium capitalize   pb-10">
+                            Our Cases</h3>
+                        <div class="portfolio_header-button">
+                            <a href="http://localhost/wordpress-webpack-theme/news-events-2/" target="_self"
+                                class="primary-btn home-part__btn">
+                                <span class="btn-text"><span>VIEW ALL PROJECTS</span></span>
+                                <span class="btn-arrow">
+                                    <span><span class="icon-arrow-right"></span></span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
-        <div class="wgl-portfolio_wrapper">
+        <div class="wgl-portfolio_wrapper 3xl:w-[75%] xxl:w-[67%]  max-lg:w-full -mx-[1px]">
             <div class="wgl-portfolio_container container-grid row grid-2">
 
-                <article class="portfolio__item item design development">
-                    <div class="item__wrapper">
-                        <div class="item__image">
-                            <div class="item__image-wrap">
-                                <img decoding="async"
+                <article class="portfolio__item item design development  group">
+                    <div
+                        class="item__wrapper relative flex border border-black -mb-[1px] sm:group-odd:flex-row-reverse sm:group-even:flex-row-reverse   flex-col group">
+                        <div
+                            class="item__image relative overflow-hidden self-center sm:w-[calc(50%+1px)] w-full transition duration-500 scale-100 before:absolute before:inset-0 before:z-10 before:rounded-inherit before:transition-all before:duration-500 before:ease-in-out after:absolute after:inset-0 after:z-10 after:rounded-inherit after:transition-all after:duration-500 after:ease-in-out transition-all duration-500 ease-in-out">
+                            <div
+                                class="item__image-wrap 3xl:scale-[0.85] lg:scale-[0.816] scale-[1] transition duration-1000 ease-in-out group-hover:scale-[1]">
+                                <img class="" decoding="async"
                                     src="https://wgl-dsites.net/motto/wp-content/uploads/2023/12/portfolio-s2-1290x1290.jpg"
                                     alt="">
                             </div>
                             <a href="https://wgl-dsites.net/motto/portfolio/eye-vision-agency/"
                                 class="single_link portfolio_link"></a>
                         </div>
-                        <div class="item__description">
+                        <div
+                            class="item__description sm:w-[calc(50%+1px)] w-full lg:p-11 p-6 relative z-10 flex flex-col justify-between	sm:group-odd:border-r-black sm:group-odd:border sm:border-l-0 group-even:border-l-black group-odd:-mr-[1px] group-even:-ml-[1px] gap-10">
                             <div class="description__wrapper">
-                                <div class="post_cats">
+                                <div class="post_cats text-base font-medium  text-[#7B7B7B] uppercase">
                                     <a href=https://wgl-dsites.net/motto/portfolio-category/design/
-                                        class="portfolio-category">design</a>
+                                        class="portfolio-category inline-block transition after:inline-block  after:content-['-'] after:mx-1 whitespace-normal">design</a>
                                     <a href=https://wgl-dsites.net/motto/portfolio-category/development/
-                                        class="portfolio-category">development</a>
+                                        class="portfolio-category  last:after:hidden   ">development</a>
                                 </div>
-                                <div class="item__title">
-                                    <h5 class="title">
+                                <div class=" item__title">
+                                    <h5
+                                        class="title lg:text-5xl md:text-[2.1rem] text-[1.9rem] font-medium md:my-5 my-3">
                                         <a href="https://wgl-dsites.net/motto/portfolio/eye-vision-agency/"
                                             class="single_link">Eye Vision Agency</a>
                                     </h5>
                                 </div>
-                                <div class="description_content">
+                                <div class="description_content lg:text-xl text-[1rem] font-medium  mt-6 text-black">
                                     <div class="content">Company branding goes beyond just a logo; it encompasses the
                                         values, personality,</div>
                                 </div>
                             </div>
                             <div class="description__footer">
-                                <div class="item__date">
-                                    <span class="item__date-title">DATE:</span>
-                                    <span class="item__date-date">December 27, 2023</span>
-                                </div>
+
                                 <div class="item__button">
                                     <a href="https://wgl-dsites.net/motto/portfolio/eye-vision-agency/"
                                         class="single_link"></a>
@@ -204,18 +220,22 @@ if ($partners_items && !$hide_block) :
                         </div>
                     </div>
                 </article>
-                <article class="portfolio__item item development marketing">
-                    <div class="item__wrapper">
-                        <div class="item__image">
-                            <div class="item__image-wrap">
-                                <img decoding="async"
+                <article class="portfolio__item item development marketing group">
+                    <div
+                        class="item__wrapper flex border border-black -mb-[1px] sm:group-odd:flex-row-reverse sm:group-even:flex-row-reverse flex-col group">
+                        <div
+                            class="item__image relative overflow-hidden self-center sm:w-[calc(50%+1px)] w-full transition duration-500 scale-100 before:absolute before:inset-0 before:z-10 before:rounded-inherit before:transition-all before:duration-500 before:ease-in-out after:absolute after:inset-0 after:z-10 after:rounded-inherit after:transition-all after:duration-500 after:ease-in-out transition-all duration-500 ease-in-out">
+                            <div
+                                class="item__image-wrap 3xl:scale-[0.85] xxl:scale-[0.816] scale-[1] transition duration-1000 ease-in-out group-hover:scale-[1]">
+                                <img class="duration-500" decoding="async"
                                     src="https://wgl-dsites.net/motto/wp-content/uploads/2023/12/portfolio-s3-1290x1290.jpg"
                                     alt="">
                             </div>
                             <a href="https://wgl-dsites.net/motto/portfolio/company-branding/"
                                 class="single_link portfolio_link"></a>
                         </div>
-                        <div class="item__description">
+                        <div
+                            class="item__description sm:w-[calc(50%+1px)] w-full p-11 relative z-10 flex flex-col content-between border-r-black   sm:group-even:border-l group-even:border-l-black -mr-[1px] gap-10 sm:group-even:-ml-[1px]">
                             <div class="description__wrapper">
                                 <div class="post_cats">
                                     <a href=https://wgl-dsites.net/motto/portfolio-category/development/
@@ -247,9 +267,11 @@ if ($partners_items && !$hide_block) :
                         </div>
                     </div>
                 </article>
-                <article class="portfolio__item item marketing photography">
-                    <div class="item__wrapper">
-                        <div class="item__image">
+                <!-- <article class="portfolio__item item marketing photography group">
+                    <div
+                        class="item__wrapper flex border border-black -mb-[1px] md:group-odd:flex-row-reverse flex-col ">
+                        <div
+                            class="item__image relative overflow-hidden self-center w-[calc(50%+1px)] transition duration-500 scale-100">
                             <div class="item__image-wrap">
                                 <img decoding="async"
                                     src="https://wgl-dsites.net/motto/wp-content/uploads/2023/12/portfolio-s10-1290x1290.jpg"
@@ -258,7 +280,7 @@ if ($partners_items && !$hide_block) :
                             <a href="https://wgl-dsites.net/motto/portfolio/slow-motion/"
                                 class="single_link portfolio_link"></a>
                         </div>
-                        <div class="item__description">
+                        <div class="item__description w-[calc(50%+1px)]">
                             <div class="description__wrapper">
                                 <div class="post_cats">
                                     <a href=https://wgl-dsites.net/motto/portfolio-category/marketing/
@@ -291,8 +313,9 @@ if ($partners_items && !$hide_block) :
                     </div>
                 </article>
                 <article class="portfolio__item item design development">
-                    <div class="item__wrapper">
-                        <div class="item__image">
+                    <div class="item__wrapper flex border border-black -mb-[1px]">
+                        <div
+                            class="item__image relative overflow-hidden self-center w-[calc(50%+1px)] transition duration-500 scale-100">
                             <div class="item__image-wrap">
                                 <img decoding="async"
                                     src="https://wgl-dsites.net/motto/wp-content/uploads/2023/12/portfolio-s13-1290x1290.jpg"
@@ -332,7 +355,7 @@ if ($partners_items && !$hide_block) :
                             </div>
                         </div>
                     </div>
-                </article>
+                </article> -->
             </div>
         </div>
     </div>
