@@ -72,10 +72,6 @@ if ($items_v2 && !$hide_block) :
         <div
             class="showcase__item relative flex  lg:flex-row max-lg:flex-col justify-start items-center  py-[0.9em]  px-[3.125%] border-t border-white/20  lg:min-h-[11em] max-sl:min-h-[10em] w-full pointer-events-auto m-0 transition-all duration-700 group ">
 
-
-
-
-
             <?php if ($title || $desc) : ?>
 
 
