@@ -1105,13 +1105,13 @@ $container-width: 192rem; //resolve in 192x12.5px(fontsize) = 2400px
 //   .portfolio_header-button {
 //   margin-top: 33px;
 // }
-.wgl-portfolio.portfolio_header-inline .wgl-button {
-  padding-right: 50px;
-}
+// .wgl-portfolio.portfolio_header-inline .wgl-button {
+//   padding-right: 50px;
+// }
 
-.wgl-button.btn-size-xl {
-  --button-padding: 22px 13px 22px 26px;
-}
+// .wgl-button.btn-size-xl {
+//   --button-padding: 22px 13px 22px 26px;
+// }
 // .wgl-portfolio_container.grid-2 .portfolio__item:nth-child(odd) .item__wrapper {
 //   flex-direction: row-reverse;
 //   position: relative;
@@ -1156,25 +1156,25 @@ $container-width: 192rem; //resolve in 192x12.5px(fontsize) = 2400px
 // .portfolio__item .item__wrapper .item__image img {
 //   transition: 0.5s;
 // }
-.portfolio__item .portfolio_link,
-.portfolio__item .portfolio_link-icon {
-  transition: 0.5s ease-in-out;
-}
+// .portfolio__item .portfolio_link,
+// .portfolio__item .portfolio_link-icon {
+//   transition: 0.5s ease-in-out;
+// }
 
-.portfolio__item .portfolio_link {
-  display: block;
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  font-size: 24px;
-  opacity: 0;
-}
-.portfolio__item .item__wrapper .item__image::after {
-  opacity: 0;
-}
+// .portfolio__item .portfolio_link {
+//   display: block;
+//   position: absolute;
+//   z-index: 0;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   font-size: 24px;
+//   opacity: 0;
+// }
+// .portfolio__item .item__wrapper .item__image::after {
+//   opacity: 0;
+// }
 
 // .portfolio__item .item__wrapper .item__image::before,
 // .portfolio__item .item__wrapper .item__image::after {
@@ -1189,9 +1189,9 @@ $container-width: 192rem; //resolve in 192x12.5px(fontsize) = 2400px
 //   transition: 0.5s ease-in-out;
 //   pointer-events: none;
 // }
-.portfolio__item .item__wrapper:hover .item__image::before {
-  opacity: 0;
-}
+// .portfolio__item .item__wrapper:hover .item__image::before {
+//   opacity: 0;
+// }
 
 // .wgl-portfolio_container.grid-2 .item__wrapper:hover .item__image-wrap {
 //   transform: scale(1);
@@ -1250,17 +1250,17 @@ $container-width: 192rem; //resolve in 192x12.5px(fontsize) = 2400px
 // .wgl-portfolio_container.grid-2 .item__wrapper .item__image {
 //   align-self: center;
 // }
-.wgl-portfolio_container.grid-2 .item__wrapper .item__description::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  height: 100%;
-}
-.portfolio__item .description__wrapper {
-  text-align: left;
-  width: 100%;
-  transition: 0.5s ease-in-out;
-}
+// .wgl-portfolio_container.grid-2 .item__wrapper .item__description::before {
+//   content: "";
+//   position: absolute;
+//   z-index: 1;
+//   height: 100%;
+// }
+// .portfolio__item .description__wrapper {
+//   text-align: left;
+//   width: 100%;
+//   transition: 0.5s ease-in-out;
+// }
 // .post_cats {
 //   font-size: 14px;
 //   font-weight: 600;
@@ -1329,19 +1329,19 @@ $container-width: 192rem; //resolve in 192x12.5px(fontsize) = 2400px
 // .wgl-portfolio_container.grid-2 .item__wrapper .item__button {
 //   /* margin-top: 41px; */
 // }
-.wgl-portfolio_container.grid-2 .item__wrapper .item__button a {
-  color: #ababab;
-  transition: color 0.5s ease-in-out;
-}
-.wgl-portfolio_container.grid-2 .item__wrapper .item__button a::before {
-  content: "\f10a";
-  font-family: flaticon;
-  display: inline-block;
-  font-size: 36px;
-  transform: rotate(-135deg);
-  line-height: 1;
-  transition: transform 0.5s ease-in-out;
-}
+// .wgl-portfolio_container.grid-2 .item__wrapper .item__button a {
+//   color: #ababab;
+//   transition: color 0.5s ease-in-out;
+// }
+// .wgl-portfolio_container.grid-2 .item__wrapper .item__button a::before {
+//   content: "\f10a";
+//   font-family: flaticon;
+//   display: inline-block;
+//   font-size: 36px;
+//   transform: rotate(-135deg);
+//   line-height: 1;
+//   transition: transform 0.5s ease-in-out;
+// }
 // .wgl-portfolio_container.grid-2
 //   .portfolio__item:nth-child(odd)
 //   .item__wrapper
@@ -1378,14 +1378,14 @@ $container-width: 192rem; //resolve in 192x12.5px(fontsize) = 2400px
 //     transform: scale(1);
 //   }
 // }
-@media (max-width: 1200px) {
-  .wgl-portfolio_container.grid-2
-    .item__wrapper
-    .item__image
-    .item__image-wrap {
-    transform: scale(1);
-  }
-}
+// @media (max-width: 1200px) {
+//   .wgl-portfolio_container.grid-2
+//     .item__wrapper
+//     .item__image
+//     .item__image-wrap {
+//     transform: scale(1);
+//   }
+// }
 
 // @media (max-width: 1200px) {
 //   .wgl-portfolio.portfolio_header-inline {
