@@ -9,6 +9,6 @@ if (has_post_thumbnail()) {
 
 <div class="flex flex-col w-[35%] max-sl:w-[32%] max-md:hidden image-wrap">
     <div class="flex justify-center items-center px-16 max-sl:px-10  bg-darkblue h-[20vw] w-[24vw]">
-        <img loading="lazy" src="<?= $post_featured_img; ?>" alt="Certification logo" class="max-w-full transition-all img-invert duration-500 img-item  w-[12vw] " />
+        <img loading="lazy" src="<?= $post_featured_img; ?>" alt="Certification logo" class="max-w-full transition-all  duration-500 img-item  w-[12vw] " />
     </div>
 </div>

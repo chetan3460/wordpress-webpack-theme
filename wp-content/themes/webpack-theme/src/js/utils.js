@@ -102,6 +102,7 @@ export const importComponent = (element, classID) => {
 export const max1200 = window.matchMedia("(max-width: 1200px)");
 export const max767 = window.matchMedia("(max-width: 767px)");
 export const max375 = window.matchMedia("(max-width: 375px)");
+export const sm576 = window.matchMedia("(max-width: 576px)");
 
 export const isMobileAndTablet = () => {
   let check = false;
@@ -118,3 +119,21 @@ export const isMobileAndTablet = () => {
   })(navigator.userAgent || navigator.vendor || window.opera);
   return check;
 };
+
+
+// Define your breakpoints
+const larger = 1600;
+const xxl = 1400;
+const xl = 1200;
+const lg = 992;
+const md = 768;
+const sm = 576;
+
+// Get the window object
+const windowOn = window;
+
+// Get the current device width
+const device_width = window.innerWidth;
+
+// Export the variables and windowOn object
+export { windowOn, larger, xxl, xl, lg, md, sm, device_width };

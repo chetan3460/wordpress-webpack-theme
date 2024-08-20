@@ -2,6 +2,58 @@
 add_action('init', 'create_custom_posts');
 function create_custom_posts()
 {
+
+
+
+    //CPT Services
+    register_post_type(
+        'services',
+        array(
+            'labels' => array(
+                'name' => __('Services'),
+                'singular_name' => __('Services')
+            ),
+            'public' => true,
+            // 'has_archive' => false,
+            'rewrite' => array('slug' => 'services'),
+            'show_in_rest' => true,
+            'capability_type' => 'post',
+            'hierarchical' => false,
+            'menu_position' => null,
+            'publicly_queryable' => true,
+            'supports' => array('title', 'editor', 'thumbnail', 'excerpt')
+        )
+    );
+
+    // Custom taxonomy - Category for solutions
+    $services_cat = array(
+        'name' => _x('Category', 'taxonomy general name'),
+        'singular_name' => _x('Category', 'taxonomy singular name'),
+        'search_items' => __('Search Categories'),
+        'all_items' => __('All Categories'),
+        'parent_item' => __('Parent Category'),
+        'parent_item_colon' => __('Parent Category:'),
+        'edit_item' => __('Edit Category'),
+        'update_item' => __('Update Category'),
+        'add_new_item' => __('Add New Category'),
+        'new_item_name' => __('New Category Name'),
+        'menu_name' => __('Category'),
+    );
+
+    register_taxonomy(
+        'services_category',
+        array('services'),
+        array(
+            'hierarchical' => true,
+            'labels' => $services_cat,
+            'show_ui' => true,
+            'show_admin_column' => true,
+            'query_var' => true,
+            'show_in_rest' => true,
+            'rewrite' => array('slug' => 'services-category'),
+        )
+    );
+
     // CPT News
     register_post_type(
         'news',
@@ -563,7 +615,7 @@ function create_custom_posts()
             'hierarchical' => false,
             'menu_position' => null,
             'publicly_queryable' => true,
-            'supports' => array('title', 'editor','excerpt')
+            'supports' => array('title', 'editor', 'excerpt')
         )
     );
 
@@ -686,14 +738,13 @@ function create_custom_posts()
             'rewrite' => array('slug' => 'downloads-category'),
         )
     );
-
 }
 
 
 function modify_nav_menu_meta_box_object($object)
 {
     if ($object->name === 'news_category') {
-        $object->labels->name = __('News Category',T_PREFIX);
+        $object->labels->name = __('News Category', T_PREFIX);
     }
     if ($object->name === 'solutions_category') {
         $object->labels->name = __('Solutions Category', T_PREFIX);
@@ -732,5 +783,3 @@ function modify_nav_menu_meta_box_object($object)
 }
 
 add_filter('nav_menu_meta_box_object', 'modify_nav_menu_meta_box_object');
-
-?>

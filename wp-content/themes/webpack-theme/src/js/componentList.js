@@ -46,6 +46,10 @@ const productListing = $(".product-listing");
 // Partner Slider
 const partnerSlider = $(".partner-slider");
 
+// Case Studies Blocks
+const caseStudiesBlockV1 = $(".case-studies-block_v1");
+
+
 export const componentList = [
   {
     element: custom_container,
@@ -235,6 +239,11 @@ export const componentList = [
   {
     element: partnerSlider,
     className: "PartnerSlider",
+    mobile: true,
+  },
+  {
+    element: caseStudiesBlockV1,
+    className: "caseStudiesBlockV1",
     mobile: true,
   },
 ];
