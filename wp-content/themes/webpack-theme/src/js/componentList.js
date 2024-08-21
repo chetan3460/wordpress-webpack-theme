@@ -49,8 +49,16 @@ const partnerSlider = $(".partner-slider");
 // Case Studies Blocks
 const caseStudiesBlockV1 = $(".case-studies-block_v1");
 
+// Threejs
+const lazyModel = $(".lazy-model");
+
 
 export const componentList = [
+  {
+    element: lazyModel,
+    className: "LazyLoadingModel",
+    mobile: true,
+  },
   {
     element: custom_container,
     className: "CustomContainer",

@@ -81,8 +81,30 @@ export default new (class App {
     //     });
     //   });
     // }
-  };
+    if (this.modelViewer.length) {
+      this.loadModelViewer();
 
+      if (this.homePage.length) {
+        window.scroll({
+          top: 0,
+          left: 0,
+          behavior: "smooth",
+        });
+      }
+    }
+  };
+  loadModelViewer = () => {
+    if (!this.loaded) {
+      const modelViewer = document.createElement("script");
+      modelViewer.type = "module";
+      modelViewer.defer = "defer";
+      modelViewer.src =
+        CCM_APPLICATION_URL +
+        "/application/themes/nbk_wealth/src/js/libs/model-viewer.min.js";
+      this.htmlBody[0].appendChild(modelViewer);
+      this.loaded = true;
+    }
+  };
   captchaLoad = () => {
     $(window).on("scroll load", () => {
       if (inVP(this.formidable) && !this.formidable.hasClass("formInview")) {
@@ -192,7 +214,7 @@ export default new (class App {
       requestAnimationFrame(raf)
     }
     requestAnimationFrame(raf)
-
+    // to be removed
     function calculate() {
       if ($(window).width() - $('.container').width() >= 0) {
         let scalefactor = $(window).width() / $('.container').width()
@@ -203,6 +225,13 @@ export default new (class App {
     $(window).on('resize', function (e) {
       calculate()
     })
+    // Threejs
+    if (this.modelViewer.length) {
+      this.modelViewer.each((_, el) => {
+        detectModelLoad(el);
+      });
+    }
+
   };
 
   windowResize = () => {
@@ -241,6 +270,23 @@ export default new (class App {
       'active',
       this.window.scrollTop() > this.screenHeight / 2,
     );
+
+
+
+    // Threejs
+    if (this.modelViewer.length) {
+      this.modelViewer.each((_, el) => {
+        if (el.matches(".model-loaded.model-rotate-trigger")) {
+          if (inVP($(el))) {
+            el.autoRotate = true;
+            el.classList.add("rotating");
+          } else {
+            el.autoRotate = false;
+            el.classList.remove("rotating");
+          }
+        }
+      });
+    }
   };
 
   handleSplashScreen() {

@@ -240,7 +240,25 @@
             <span class="icon-arrow-right "></span>
         </div>
     </div>
+    <!-- Threejs -->
+    <?php
+    if (is_page('creative')) { // Replace 'creative' with the actual slug of your page.
+    ?>
+        <div id="webgi-canvas-container">
+            <!-- <model-viewer id="scroll-3d" disable-tap interaction-prompt="none" class="w-100 h-100" loading="eager" camera-orbit="-89.78deg 90.177deg 0%" src="<?php echo $themePath; ?>/assets/3d/nbk-wealth-shell.glb" exposure="1" shadow-intensity="0" auto-rotate-delay="0"> -->
+            <!-- <model-viewer id="scroll-3d" disable-tap interaction-prompt="none" class="w-100 h-100" loading="eager" src="<?php echo $themePath; ?>/assets/3d/NBK_main_30_10_new-baked-v1.glb" exposure="1" shadow-intensity="0" auto-rotate-delay="0" 
+        camera-orbit="0.6201667687001415rad 1.1299009183012785rad 136.98410211259906m" 
+        camera-target="15.317220012784658m 8.49520583849267m 12.252313429329606m" 
+        field-of-view="2.8137deg"
+        min-field-of-view="1deg"
+        max-field-of-view="180deg"
+        camera-controls
+        ></model-viewer> -->
 
+        </div>
+    <?php
+    }
+    ?>
     <?php wp_footer(); ?>
 
     <!-- Custom scripts or code in footer from theme settings -->
@@ -249,6 +267,8 @@
         echo the_field('footer_code', 'option');
     endif;
     ?>
+
+
 
     </body>
 

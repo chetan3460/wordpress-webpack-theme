@@ -103,6 +103,7 @@ export const max1200 = window.matchMedia("(max-width: 1200px)");
 export const max767 = window.matchMedia("(max-width: 767px)");
 export const max375 = window.matchMedia("(max-width: 375px)");
 export const sm576 = window.matchMedia("(max-width: 576px)");
+export const max991 = window.matchMedia("(max-width: 991px)");
 
 export const isMobileAndTablet = () => {
   let check = false;
@@ -137,3 +138,122 @@ const device_width = window.innerWidth;
 
 // Export the variables and windowOn object
 export { windowOn, larger, xxl, xl, lg, md, sm, device_width };
+
+
+// Three js
+export const detectModelLoad = (modelViewer) => {
+  if (!$(modelViewer).length) return;
+  if (modelViewer.complete) {
+    $(modelViewer).hasClass("model-rotate-trigger") && modelRotateTrigger(modelViewer);
+    $(modelViewer).closest(".rotate-model-on-hover").length && rotateModelOnHover($(modelViewer).closest(".rotate-model-on-hover"));
+
+    if ($(modelViewer).attr("data-color") && ($(modelViewer).attr("data-color") != "" || $(modelViewer).attr("data-color") != "gold")) {
+      changeModelColor(modelViewer, $(modelViewer).attr("data-color"));
+    } else {
+      $(modelViewer).addClass("model-loaded");
+    }
+  } else {
+    modelViewer.addEventListener("load", () => {
+      $(modelViewer).hasClass("model-rotate-trigger") && modelRotateTrigger(modelViewer);
+      $(modelViewer).closest(".rotate-model-on-hover").length && rotateModelOnHover($(modelViewer).closest(".rotate-model-on-hover"));
+
+      if ($(modelViewer).attr("data-color") && $(modelViewer).attr("data-color") != "" && $(modelViewer).attr("data-color") != "gold") {
+        changeModelColor(modelViewer, $(modelViewer).attr("data-color"));
+      } else {
+        $(modelViewer).addClass("model-loaded");
+      }
+    })
+  }
+}
+
+export const changeModelColor = (currentValue, cl) => {
+  const newColor = cl == "black" ? "#000000" : "#ffffff";
+
+  const [material] = currentValue.model.materials;
+  let colorString = hexToRgbToDecimal(newColor);
+
+  let color = colorString.split(',')
+  material.pbrMetallicRoughness.setBaseColorFactor(color);
+  cl == "white" && material.pbrMetallicRoughness.setRoughnessFactor(0.67);
+
+  cl == "black" && (
+    currentValue.exposure = 1.5,
+    material.pbrMetallicRoughness.setMetallicFactor(0.61),
+    material.pbrMetallicRoughness.setRoughnessFactor(0.63)
+  );
+
+  setTimeout(() => {
+    $(currentValue).addClass("model-loaded");
+  }, 100)
+}
+
+export const rotateModelOnHover = (currentValue) => {
+  const current = currentValue[0];
+  const modelViewer = current.querySelector("model-viewer");
+  const cameraOrbit = modelViewer.getCameraOrbit();
+
+  let rotateTimeout = null;
+  current.addEventListener("mouseover", (el) => {
+    modelViewer.autoRotate = true;
+    const tl = gsap.timeline({ ease: "circ.out" });
+
+    gsap.to(modelViewer, {
+      ease: "circ.out",
+      keyframes: [
+        { rotationPerSecond: "-100%", duration: 1.2 },
+        { rotationPerSecond: "-4000%", duration: 1.8 },
+        { rotationPerSecond: "-100%", duration: 0.8 }
+      ]
+    });
+  });
+
+  current.addEventListener("mouseout", (el) => {
+    modelViewer.cameraOrbit = cameraOrbit;
+    modelViewer.autoRotate = false;
+    clearTimeout(rotateTimeout);
+  });
+};
+
+export const modelRotateTrigger = (modelRotateTrigger) => {
+  const temp = modelRotateTrigger.cameraOrbit.split(" ");
+  const x = parseInt(temp[0].replace("deg", ""));
+  const y = parseInt(temp[1].replace("deg", ""));
+  const z = parseInt(temp[2].replace("%", ""));
+
+  modelRotateTrigger.cameraOrbit = `-${x + 45}deg ${y}deg ${z}%`;
+
+  gsap.to(modelRotateTrigger, {
+    opacity: 1,
+    delay: 0.4
+  });
+
+  const xOrbit = $(modelRotateTrigger).hasClass("extend-orbit") ? 180 : 90;
+  const duration = $(modelRotateTrigger).hasClass("extend-orbit") ? 4000 : 2000;
+
+  gsap.to(modelRotateTrigger, {
+    cameraOrbit: `${xOrbit}deg ${y}deg ${z}%`,
+    scrollTrigger: {
+      trigger: modelRotateTrigger,
+      start: "top bottom",
+      end: `+=${duration}s`,
+      scrub: true,
+      immediateRender: false,
+    },
+  });
+}
+
+export const hexToRgbToDecimal = (hex) => {
+  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result ? `${parseInt(result[1], 16) / 255}, ${parseInt(result[2], 16) / 255}, ${parseInt(result[3], 16) / 255}` : null;
+}
+
+export const useDebounce = (func, timeout = 500) => {
+  let timer;
+
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      func.apply(this, args);
+    }, timeout);
+  };
+}
