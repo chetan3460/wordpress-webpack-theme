@@ -81,17 +81,17 @@ export default new (class App {
     //     });
     //   });
     // }
-    if (this.modelViewer.length) {
-      this.loadModelViewer();
+    // if (this.modelViewer.length) {
+    //   this.loadModelViewer();
 
-      if (this.homePage.length) {
-        window.scroll({
-          top: 0,
-          left: 0,
-          behavior: "smooth",
-        });
-      }
-    }
+    //   if (this.homePage.length) {
+    //     window.scroll({
+    //       top: 0,
+    //       left: 0,
+    //       behavior: "smooth",
+    //     });
+    //   }
+    // }
   };
   loadModelViewer = () => {
     if (!this.loaded) {
