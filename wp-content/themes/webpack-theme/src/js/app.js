@@ -93,18 +93,18 @@ export default new (class App {
     //   }
     // }
   };
-  loadModelViewer = () => {
-    if (!this.loaded) {
-      const modelViewer = document.createElement("script");
-      modelViewer.type = "module";
-      modelViewer.defer = "defer";
-      modelViewer.src =
-        CCM_APPLICATION_URL +
-        "/application/themes/nbk_wealth/src/js/libs/model-viewer.min.js";
-      this.htmlBody[0].appendChild(modelViewer);
-      this.loaded = true;
-    }
-  };
+  // loadModelViewer = () => {
+  //   if (!this.loaded) {
+  //     const modelViewer = document.createElement("script");
+  //     modelViewer.type = "module";
+  //     modelViewer.defer = "defer";
+  //     modelViewer.src =
+  //       CCM_APPLICATION_URL +
+  //       "/application/themes/nbk_wealth/src/js/libs/model-viewer.min.js";
+  //     this.htmlBody[0].appendChild(modelViewer);
+  //     this.loaded = true;
+  //   }
+  // };
   captchaLoad = () => {
     $(window).on("scroll load", () => {
       if (inVP(this.formidable) && !this.formidable.hasClass("formInview")) {
@@ -226,11 +226,11 @@ export default new (class App {
       calculate()
     })
     // Threejs
-    if (this.modelViewer.length) {
-      this.modelViewer.each((_, el) => {
-        detectModelLoad(el);
-      });
-    }
+    // if (this.modelViewer.length) {
+    //   this.modelViewer.each((_, el) => {
+    //     detectModelLoad(el);
+    //   });
+    // }
 
   };
 
@@ -274,19 +274,19 @@ export default new (class App {
 
 
     // Threejs
-    if (this.modelViewer.length) {
-      this.modelViewer.each((_, el) => {
-        if (el.matches(".model-loaded.model-rotate-trigger")) {
-          if (inVP($(el))) {
-            el.autoRotate = true;
-            el.classList.add("rotating");
-          } else {
-            el.autoRotate = false;
-            el.classList.remove("rotating");
-          }
-        }
-      });
-    }
+    // if (this.modelViewer.length) {
+    //   this.modelViewer.each((_, el) => {
+    //     if (el.matches(".model-loaded.model-rotate-trigger")) {
+    //       if (inVP($(el))) {
+    //         el.autoRotate = true;
+    //         el.classList.add("rotating");
+    //       } else {
+    //         el.autoRotate = false;
+    //         el.classList.remove("rotating");
+    //       }
+    //     }
+    //   });
+    // }
   };
 
   handleSplashScreen() {
