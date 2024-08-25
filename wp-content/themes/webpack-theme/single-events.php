@@ -8,6 +8,8 @@
         $date = DateTime::createFromFormat('j F Y', $event_date);
         $startTime = DateTime::createFromFormat('H:i:s', $event_start_time);
         $endTime = DateTime::createFromFormat('H:i:s', $event_end_time);
+        $eventStartDate = get_field('event_start_date');
+        $eventEndDate = get_field('event_end_date');
         $location = get_field('location');
         if (has_post_thumbnail()) {
             $post_featured_img = wp_get_attachment_image_url(get_post_thumbnail_id(), "full");
@@ -35,17 +37,30 @@
                                 <div class="descp">
                                     <p><span class="opacity-50">Time</span>
                                         <?php if ($startTime && $endTime) : ?>
-                                            <span class="text-orange px-2 text-[0.9rem]">|</span><?= $startTime->format('H:i') ?> - <?= $endTime->format('H:i') ?>
+                                            <span class="border-black/20 opacity-50 px-2 text-[0.9rem]">|</span><?= $startTime->format('H:i') ?> - <?= $endTime->format('H:i') ?>
                                         <?php endif; ?>
                                     </p>
                                 </div>
                             <?php endif; ?>
+
                         </div>
+                        <?php if ($eventStartDate) : ?>
+                            <div class="e-detail flex gap-2 items-start max-md:text-[0.875rem]">
+                                <img loading="lazy" class="lazy-image object-contain w-4.5 h-auto" data-src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-date.svg" alt="FPI" style="width:24px;">
+                                <div class="descp">
+                                    <p><span class="opacity-50">Dates</span>
+                                        <?php if ($eventStartDate && $eventEndDate) : ?>
+                                            <span class="border-black/20 opacity-50 px-2 text-[0.9rem]">|</span><?= $eventStartDate ?> - <?= $eventEndDate ?>
+                                        <?php endif; ?>
+                                    </p>
+                                </div>
+                            </div>
+                        <?php endif; ?>
                         <?php if ($location) : ?>
                             <div class="e-detail flex gap-2 items-start max-md:text-[0.875rem]">
                                 <img loading="lazy" class="lazy-image object-contain w-4.5 h-auto" data-src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-location.svg" alt="FPI">
                                 <div class="descp">
-                                    <p><span class="opacity-50">Location</span><span class="text-orange px-2 text-[0.9rem]">|</span><?= $location; ?></p>
+                                    <p><span class="opacity-50">Location</span><span class="border-black/20 opacity-50 px-2 text-[0.9rem]">|</span><?= $location; ?></p>
                                 </div>
                             </div>
                         <?php endif; ?>
@@ -79,24 +94,24 @@
 
         <!-- Check if there are other events -->
         <?php if ($other_events_query->have_posts()) { ?>
-            <section class="py-[6.25rem]   max-md:py-12 event-list-block bg-lightblue overflow-slider">
+            <section class="py-[6.25rem]   max-lg:py-12 event-list-block bg-lightblue overflow-slider">
                 <div class="max-container">
                     <div class="flex gap-5 justify-between  w-full max-md:flex-wrap max-md:max-w-full max-6xl:px-16 max-xl:px-5 fade-in">
                         <div class="flex flex-col text-black max-md:max-w-full">
-                            <h2 class="text-6xl leading-[4rem] max-md:text-[2.5rem] max-md:leading-[3rem]  font-medium capitalize"><?= _e('other events',T_PREFIX);?></h2>
+                            <h2 class="text-6xl leading-[4rem] max-md:text-[2.5rem] max-md:leading-[3rem]  font-medium capitalize"><?= _e('other events', T_PREFIX); ?></h2>
                         </div>
-                        <?php if($total_posts >= 2):?>
-                        <div class="flex gap-1.5 justify-end   rounded-full max-sl:w-[30%] max-md:hidden">
-                            <div class="btn-wrap  flex justify-end gap-3">
-                                <button class="swiper-btn-prev flex items-center justify-center border-darkblue border-solid border rounded-full w-[2.8rem] h-[2.8rem] transition-all duration-700 hover:bg-darkblue hover:text-white [&amp;.swiper-button-disabled]:pointer-events-none swiper-button-disabled" aria-label="left slide arrow" disabled="">
-                                    <span class="icon-arrow-left"></span>
-                                </button>
-                                <button class="swiper-btn-next flex items-center justify-center border-darkblue border-solid border rounded-full w-[2.8rem] h-[2.8rem] transition-all duration-700 hover:bg-darkblue hover:text-white [&amp;.swiper-button-disabled]:pointer-events-none" aria-label="right slide arrow">
-                                    <span class="icon-arrow-right"></span>
-                                </button>
+                        <?php if ($total_posts >= 2): ?>
+                            <div class="flex gap-1.5 justify-end   rounded-full max-sl:w-[30%] max-md:hidden">
+                                <div class="btn-wrap  flex justify-end gap-3">
+                                    <button class="swiper-btn-prev flex items-center justify-center border-darkblue border-solid border rounded-full w-[2.8rem] h-[2.8rem] transition-all duration-700 hover:bg-darkblue hover:text-white [&amp;.swiper-button-disabled]:pointer-events-none swiper-button-disabled" aria-label="left slide arrow" disabled="">
+                                        <span class="icon-arrow-left"></span>
+                                    </button>
+                                    <button class="swiper-btn-next flex items-center justify-center border-darkblue border-solid border rounded-full w-[2.8rem] h-[2.8rem] transition-all duration-700 hover:bg-darkblue hover:text-white [&amp;.swiper-button-disabled]:pointer-events-none" aria-label="right slide arrow">
+                                        <span class="icon-arrow-right"></span>
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                        <?php endif;?>
+                        <?php endif; ?>
                     </div>
 
                     <div class="mt-16 max-md:mt-10 fade-in max-6xl:px-16 max-xl:px-5">
@@ -109,7 +124,7 @@
                                         <!-- Event card import -->
                                         <?php get_template_part('template-parts/parts/events_card'); ?>
                                     </div>
-                                    <?php } ?>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>

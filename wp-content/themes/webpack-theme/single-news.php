@@ -57,12 +57,12 @@
                     <div class="flex gap-5 justify-between  w-full max-md:flex-wrap max-md:max-w-full max-6xl:px-16 max-xl:px-5 fade-in">
 
                         <div class="flex flex-col text-black max-md:max-w-full">
-                            <h2 class="text-6xl leading-[4rem] max-md:text-[2.5rem] max-md:leading-[3rem]  font-medium capitalize"><?= _e('Related News',T_PREFIX); ?></h2>
+                            <h2 class="text-6xl leading-[4rem] max-md:text-[2.5rem] max-md:leading-[3rem]  font-medium capitalize"><?= _e('Related News', T_PREFIX); ?></h2>
                         </div>
 
                         <div class="flex gap-1.5 self-end  rounded-full max-sl:w-[30%] max-md:hidden">
                             <a href="<?= site_url(); ?>/news-events/news" class="primary-btn">
-                                <span class="btn-text"><span><?= _e('Explore All',T_PREFIX); ?></span></span>
+                                <span class="btn-text"><span><?= _e('Explore All', T_PREFIX); ?></span></span>
                                 <span class="btn-arrow">
                                     <span><span class="icon-arrow-right"></span></span>
                                 </span>
@@ -94,8 +94,8 @@
                                     while ($other_news_query->have_posts()) {
                                         $other_news_query->the_post(); ?>
                                         <div class="swiper-slide  w-[26.5rem] max-md:w-[19rem]">
-                                        <!-- News card include -->
-                                        <?php get_template_part('template-parts/parts/news_card'); ?>
+                                            <!-- News card include -->
+                                            <?php get_template_part('template-parts/parts/news_card'); ?>
                                         </div>
                                     <?php } ?>
                                 </div>
@@ -103,12 +103,12 @@
                         </div>
 
 
-                            <a href="<?= site_url() ?>/news-events/news" class="primary-btn md:hidden max-md:mt-10 max-md:pl-5">
-                                <span class="btn-text"><span><?= _e('Explore All', T_PREFIX); ?></span></span>
-                                <span class="btn-arrow">
-                                    <span><img loading="lazy" class="lazy-image" data-src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/arrow-right.svg" alt="arrow"></span>
-                                </span>
-                            </a>
+                        <a href="<?= site_url() ?>/news-events/news" class="primary-btn md:hidden max-md:mt-10 max-md:pl-5">
+                            <span class="btn-text"><span><?= _e('Explore All', T_PREFIX); ?></span></span>
+                            <span class="btn-arrow">
+                                <span><img loading="lazy" class="lazy-image" data-src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/arrow-right.svg" alt="arrow"></span>
+                            </span>
+                        </a>
 
                     </div>
 
