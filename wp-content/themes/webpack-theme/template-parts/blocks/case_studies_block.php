@@ -14,9 +14,9 @@ if ($case_studies_items && !$hide_block) :
     <?php if ($padding_top) { ?>padding-top: <?= $padding_top ?>px;<?php } ?><?php if ($padding_bottom) { ?>padding-bottom: <?= $padding_bottom ?>px <?php } ?>">
 
 
-        <div class=" lg:flex block -mr-[0.063rem]">
+        <div class=" lg:flex block -mr-[0.063rem]  ">
             <div
-                class=" sticky-sidebar block xxl:w-[33%] max-3xl:w-[calc(25%+1px)] max-lg:w-full  p-16 max-3xl:p-12 max-lg:p-0 max-lg:pb-14 border  border-light-border max-lg:border-0 -mb-[1px]">
+                class="sticky-sidebar block xxl:w-[33%] max-3xl:w-[calc(25%+1px)] max-lg:w-full  p-16 max-3xl:p-12 max-lg:p-0 max-lg:pb-14 border  border-light-border max-lg:border-0 -mb-[1px]">
 
                 <?php if ($subtitle || $heading) : ?>
                     <div class=" column two w-full min-w-[33%] sticky top-[7rem]">
@@ -81,7 +81,7 @@ if ($case_studies_items && !$hide_block) :
                                 <?php if ($case_title || $case_description) : ?>
                                     <!-- Description -->
                                     <div
-                                        class=" sm:w-[calc(50%+1px)] w-full lg:p-11 p-6 relative z-10 flex flex-col justify-between	sm:group-odd:border-r-light-border sm:group-odd:border-light-border  sm:border-l-0 group-even:border-l-light-border group-odd:-mr-[1px] group-even:-ml-[1px] gap-10">
+                                        class=" sm:w-[calc(50%+1px)] w-full lg:p-11 p-6 relative z-10 flex flex-col justify-between	sm:group-odd:border-r-light-border sm:group-odd:border-r-[1px]  sm:group-odd:border-l-light-border  sm:border-l-0 sm:group-even:border-l-[1px] group-even:border-l-light-border group-odd:-mr-[1px] group-even:-ml-[1px] gap-10">
 
                                         <div class="">
 
