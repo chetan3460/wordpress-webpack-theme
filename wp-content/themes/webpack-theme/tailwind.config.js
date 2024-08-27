@@ -24,12 +24,43 @@ module.exports = {
         lightgray: '#BEC5CF',
         mercury: '#E5E5E5',
         mediumblue: '#345177',
+        black: '#000',
+        "light-border": '#353535',
+        white: '#fff',
+        beige: '#ccbda8',
       },
     },
+    typography: ({ theme }) => ({
+      DEFAULT: {
+        css: {
+          maxWidth: "100%",
+          "--tw-prose-body": theme("colors.white"),
+          "--tw-prose-headings": theme("colors.white"),
+          "--tw-prose-lead": theme("colors.beige"),
+          "--tw-prose-links": theme("colors.beige"),
+          "--tw-prose-bold": theme("colors.beige"),
+          "--tw-prose-bullets": theme("colors.beige"),
+          "--tw-prose-hr": theme("colors.beige"),
+        },
+      },
+    }),
   },
   plugins: [
     require("@tailwindcss/typography"),
-    plugin(({ addVariant, matchVariant }) => {
+    plugin(({ addBase, addVariant, matchVariant, theme }) => {
+      addBase({
+        body: {
+          color: theme("colors.white"),
+          background: theme("colors.black"),
+          // fontFamily: theme("fontFamily.inria"),
+          margin: "0",
+          fontWeight: "normal",
+          fontSmoothing: "antialiased",
+          "-webkit-font-smoothing": "antialiased",
+          "-moz-osx-font-smoothing": "grayscale",
+          overflowX: "hidden",
+        },
+      });
       addVariant("active", "&.active", "&.swiper-slide-active"),
 
         matchVariant("nth", (value) => `&:nth-child(${value})`, {

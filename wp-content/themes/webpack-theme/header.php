@@ -66,8 +66,10 @@
                 if ($enquiry_link) :
                 ?>
                     <div class="enq-block">
-                        <!-- <a href="<? //= $enquiry_link['url']; ?>" aria-label="Send Enquiry" role="button" class="full-btn make-enquiry border-solid border border-white bg-white  rounded-full text-darkblue px-5 py-3 capitalize font-medium flex items-center gap-3 leading-3 text-[0.875rem] transition-all duration-700 cursor-pointer hover:bg-transparent hover:text-white max-lg:hidden">
-                            <span class="btn-text"><span><? //= $enquiry_link['title'] ?></span></span>
+                        <!-- <a href="<? //= $enquiry_link['url']; 
+                                        ?>" aria-label="Send Enquiry" role="button" class="full-btn make-enquiry border-solid border border-white bg-white  rounded-full text-darkblue px-5 py-3 capitalize font-medium flex items-center gap-3 leading-3 text-[0.875rem] transition-all duration-700 cursor-pointer hover:bg-transparent hover:text-white max-lg:hidden">
+                            <span class="btn-text"><span><? //= $enquiry_link['title'] 
+                                                            ?></span></span>
                             <span class="btn-arrow">
                                 <span><span class="icon-arrow-right"></span></span>
                             </span>
@@ -101,6 +103,7 @@
                             the_custom_logo();
                         }
                         ?>
+
                     </div>
                     <!-- Navigation -->
                     <div class="right flex items-center gap-5 max-xxl:gap-3  pr-[3.75rem] max-md:pr-12">
@@ -173,44 +176,44 @@
 
 
 
-<section class="form-pop-up default-form blue  group fixed size-full inset-0 z-[60]  transition-all duration-1000 [clip-path:polygon(0_0,0_0,0_100%,0_100%)] invisible [&.active]:[clip-path:polygon(0_0,100%_0%,100%_100%,0_100%)] [&.active]:visible ">
-             <div class="w-1/2 max-lg:w-3/4 max-md:w-full bg-darkblue h-full overflow-scroll absolute right-0 top-0 z-10">
-                    <div class="form-block px-14 py-16 max-md:p-5 relative">
-                        <h2 class="text-[2.5rem] max-md:text-2xl mb-7 text-white">Make Enquiry</h2>
-                        <div class="close-btn rounded-btn rounded-full cursor-pointer transition-all duration-700 delay-0 bg-white w-11 h-11  flex items-center justify-center hover:opacity-50 absolute right-14 top-10 max-md:top-3 max-md:right-5">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/close.svg" alt="<?php echo $site; ?>" class=" w-3 h-3" />
-                        </div>
-                        <?php if ($gravity_forms_select) :
-
-                                echo do_shortcode('[gravityform id="2" title="false" description="false" ajax="true"]');
-
-                        endif; ?>
+        <section class="form-pop-up default-form blue  group fixed size-full inset-0 z-[60]  transition-all duration-1000 [clip-path:polygon(0_0,0_0,0_100%,0_100%)] invisible [&.active]:[clip-path:polygon(0_0,100%_0%,100%_100%,0_100%)] [&.active]:visible ">
+            <div class="w-1/2 max-lg:w-3/4 max-md:w-full bg-darkblue h-full overflow-scroll absolute right-0 top-0 z-10">
+                <div class="form-block px-14 py-16 max-md:p-5 relative">
+                    <h2 class="text-[2.5rem] max-md:text-2xl mb-7 text-white">Make Enquiry</h2>
+                    <div class="close-btn rounded-btn rounded-full cursor-pointer transition-all duration-700 delay-0 bg-white w-11 h-11  flex items-center justify-center hover:opacity-50 absolute right-14 top-10 max-md:top-3 max-md:right-5">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/close.svg" alt="<?php echo $site; ?>" class=" w-3 h-3" />
                     </div>
-             </div>
-             <div class="overlay-blurred close-btn size-full inset-0 absolute backdrop-blur-[0.5rem] bg-black/10 ">
+                    <?php if ($gravity_forms_select) :
 
-    </div>
-</section>
+                        echo do_shortcode('[gravityform id="2" title="false" description="false" ajax="true"]');
+
+                    endif; ?>
+                </div>
+            </div>
+            <div class="overlay-blurred close-btn size-full inset-0 absolute backdrop-blur-[0.5rem] bg-black/10 ">
+
+            </div>
+        </section>
 
 
-<!-- cookie block -->
-<section class="fixed cookie-preference hidden right-5 bottom-5 bg-white rounded-3xl p-7 max-md:p-5 w-[31.5rem] max-md:w-[calc(100%-2.5rem)] shadow-2xl z-50">
-        <h2 class="text-3xl max-md:text-xl">Cookies Preference</h2>
-        <p class="text-xl max-md:text-[0.875rem] max-md:leading-6 mt-2 text-[#1A0A0C] [&>a]:text-orange [&>a:hover]:text-[#1A0A0C] [&>a]:transition-all [&>a]:duration-700 [&>a]:cursor-pointer">Our website uses cookies to make your browsing experience better. by using our site you agree to the use of cookies, visit <a href="/cookie-policy">Cookies Policy page</a>. </p>
-        <div class="btn-wrap  flex max-md:flex-col  gap-8 max-md:gap-3 mt-6"> 
-            <a href="#" class="primary-btn max-md:w-auto accept">
-                                <span class="btn-text max-md:w-[calc(100%-2.68rem)] max-md:text-center"><span>Accept</span></span>
-                                <span class="btn-arrow">
-                                    <span class="icon-arrow-right"></span>
-                                </span>
-            </a>
-            <a href="#" class="primary-btn bordered max-md:w-auto reject">
-                                <span class="btn-text max-md:w-[calc(100%-2.68rem)] max-md:text-center"><span>Reject</span></span>
-                                <span class="btn-arrow">
-                                    <span class="icon-arrow-right"></span>
-                                </span>
-            </a>
-        </div>
-</section>
+        <!-- cookie block -->
+        <section class="fixed cookie-preference hidden right-5 bottom-5 bg-white rounded-3xl p-7 max-md:p-5 w-[31.5rem] max-md:w-[calc(100%-2.5rem)] shadow-2xl z-50">
+            <h2 class="text-3xl max-md:text-xl">Cookies Preference</h2>
+            <p class="text-xl max-md:text-[0.875rem] max-md:leading-6 mt-2 text-[#1A0A0C] [&>a]:text-orange [&>a:hover]:text-[#1A0A0C] [&>a]:transition-all [&>a]:duration-700 [&>a]:cursor-pointer">Our website uses cookies to make your browsing experience better. by using our site you agree to the use of cookies, visit <a href="/cookie-policy">Cookies Policy page</a>. </p>
+            <div class="btn-wrap  flex max-md:flex-col  gap-8 max-md:gap-3 mt-6">
+                <a href="#" class="primary-btn max-md:w-auto accept">
+                    <span class="btn-text max-md:w-[calc(100%-2.68rem)] max-md:text-center"><span>Accept</span></span>
+                    <span class="btn-arrow">
+                        <span class="icon-arrow-right"></span>
+                    </span>
+                </a>
+                <a href="#" class="primary-btn bordered max-md:w-auto reject">
+                    <span class="btn-text max-md:w-[calc(100%-2.68rem)] max-md:text-center"><span>Reject</span></span>
+                    <span class="btn-arrow">
+                        <span class="icon-arrow-right"></span>
+                    </span>
+                </a>
+            </div>
+        </section>
 
-<!-- cookie block ends -->
+        <!-- cookie block ends -->

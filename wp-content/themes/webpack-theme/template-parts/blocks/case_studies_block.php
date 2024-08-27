@@ -16,14 +16,14 @@ if ($case_studies_items && !$hide_block) :
 
         <div class=" lg:flex block -mr-[0.063rem]">
             <div
-                class=" sticky-sidebar block xxl:w-[33%] max-3xl:w-[calc(25%+1px)] max-lg:w-full  p-16 max-3xl:p-12 max-lg:p-0 max-lg:pb-14 border  border-black max-lg:border-0 -mb-[1px]">
+                class=" sticky-sidebar block xxl:w-[33%] max-3xl:w-[calc(25%+1px)] max-lg:w-full  p-16 max-3xl:p-12 max-lg:p-0 max-lg:pb-14 border  border-light-border max-lg:border-0 -mb-[1px]">
 
                 <?php if ($subtitle || $heading) : ?>
                     <div class=" column two w-full min-w-[33%] sticky top-[7rem]">
 
                         <?php if ($subtitle) : ?>
                             <div
-                                class=" text-xl leading-5 uppercase  max-md:mb-[1rem] mb-5 max-md:text-[1rem] text-[#7B7B7B]">
+                                class=" text-xl leading-5 uppercase  max-md:mb-[1rem] mb-5 max-md:text-[1rem] text-[#7B7B7B] upp ">
                                 <?= $subtitle; ?>
                             </div>
                         <?php endif; ?>
@@ -66,7 +66,7 @@ if ($case_studies_items && !$hide_block) :
 
                         <article class=" group">
                             <div
-                                class=" relative flex border border-black -mb-[1px]  sm:group-odd:flex-row-reverse  max-sm:flex-col group">
+                                class=" relative flex border border-light-border -mb-[1px]  sm:group-odd:flex-row-reverse  max-sm:flex-col group">
 
                                 <!-- Image -->
                                 <div
@@ -81,7 +81,7 @@ if ($case_studies_items && !$hide_block) :
                                 <?php if ($case_title || $case_description) : ?>
                                     <!-- Description -->
                                     <div
-                                        class=" sm:w-[calc(50%+1px)] w-full lg:p-11 p-6 relative z-10 flex flex-col justify-between	sm:group-odd:border-r-black sm:group-odd:border sm:border-l-0 group-even:border-l-black group-odd:-mr-[1px] group-even:-ml-[1px] gap-10">
+                                        class=" sm:w-[calc(50%+1px)] w-full lg:p-11 p-6 relative z-10 flex flex-col justify-between	sm:group-odd:border-r-light-border sm:group-odd:border-light-border  sm:border-l-0 group-even:border-l-light-border group-odd:-mr-[1px] group-even:-ml-[1px] gap-10">
 
                                         <div class="">
 

@@ -27,8 +27,7 @@ function theme_setup()
 
     add_image_size('size-2880*1500', 2880, 1500, true);
 
-    add_image_size('blur',1,1,true);
-
+    add_image_size('blur', 1, 1, true);
 }
 
 /*
@@ -58,10 +57,10 @@ add_filter('acf/settings/save_json', 'my_acf_json_save_point');
 
 function my_acf_json_save_point($path)
 {
-	// update path
-	$path = get_stylesheet_directory() . '/acf-json';
-	// return
-	return $path;
+    // update path
+    $path = get_stylesheet_directory() . '/acf-json';
+    // return
+    return $path;
 }
 
 
@@ -132,7 +131,8 @@ add_filter('acf/load_field/name=gravity_forms_select', 'populate_acf_select_box_
 =============================================================
 */
 
-function allow_webp_upload($mimes) {
+function allow_webp_upload($mimes)
+{
     $mimes['webp'] = 'image/webp';
     return $mimes;
 }

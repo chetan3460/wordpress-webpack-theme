@@ -28,7 +28,7 @@ if (($heading || $content) && !$hide_block) :
                 <?php include(locate_template('template-parts/parts/about/top_heading.php', false, false)); ?>
 
                 <?php if ($content || $cta) : ?>
-                    <div class="flex flex-col w-6/12 max-xl:w-full mt-10 max-xl:mt-0 text-darkgray  max-w-[50%] max-xl:max-w-[100%]">
+                    <div class="flex flex-col w-6/12 max-xl:w-full mt-10 max-xl:mt-0   max-w-[50%] max-xl:max-w-[100%]">
                         <?php if ($content) : ?>
                             <!-- About Content call -->
                             <?php include(locate_template('template-parts/parts/about/about_content.php', false, false)); ?>
