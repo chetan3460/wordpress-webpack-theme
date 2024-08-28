@@ -226,7 +226,7 @@
 
     <!-- Go to top button -->
 
-    <div id="gotoTop" class="fixed z-30 right-2 bottom-14 w-10 h-10 text-xl leading-10 text-center opacity-0 invisible bg-dark-150 bg-opacity-50 border border-beige rounded-full cursor-pointer transition-all duration-700 [&.active]:opacity-100 [&.active]:visible text-white hover:bg-black">
+    <div id="gotoTop" class="fixed z-30 right-2 bottom-14 w-10 h-10 text-xl leading-10 text-center opacity-0 invisible bg-dark-100  border border-beige rounded-full cursor-pointer transition-all duration-700 [&.active]:opacity-100 [&.active]:visible text-white hover:bg-black">
         <span class="icon-arrow-right -rotate-90 block translate-y-1.5 text-lg" aria-hidden="true"></span>
     </div>
 

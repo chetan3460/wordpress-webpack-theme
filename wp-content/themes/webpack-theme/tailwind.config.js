@@ -31,6 +31,7 @@ module.exports = {
           "75": "#181a1b",
           "100": "#212121",
           "150": "#141414"
+
         },
         "light-border": '#353535',
 
@@ -59,8 +60,8 @@ module.exports = {
     plugin(({ addBase, addVariant, matchVariant, theme }) => {
       addBase({
         body: {
-          color: theme("colors.white"),
-          background: theme("colors.black"),
+          color: theme("colors.black"),
+          background: theme("colors.white"),
           // fontFamily: theme("fontFamily.inria"),
           margin: "0",
           fontWeight: "normal",

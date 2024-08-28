@@ -11,7 +11,7 @@ if ($counter_group && !$hide_block) :
     <section class="py-[6.25rem] px-16 max-xl:px-5 max-md:py-12 max-container  section-counter fade-in overflow-hidden"
         style="
     <?php if ($padding_top) { ?>padding-top: <?= $padding_top ?>px;<?php } ?><?php if ($padding_bottom) { ?>padding-bottom: <?= $padding_bottom ?>px <?php } ?>">
-        <div class="container  mx-auto grid">
+        <div class="mx-auto grid">
 
 
             <div class="counter-wrapper fade-up-stagger-wrap">
