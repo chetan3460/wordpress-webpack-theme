@@ -10,7 +10,7 @@
     $follow = get_field('follow_us', 'option');
     ?>
 
-    <footer class="pt-[6.25rem] pb-[3.75rem] px-16 max-xl:px-5 max-md:pt-12 max-md:pb-12 bg-darkblue ">
+    <footer class="pt-[6.25rem] pb-[3.75rem] px-16 max-xl:px-5 max-md:pt-12 max-md:pb-12 bg-black ">
         <div class="max-container">
             <?php
             if ($question || $follow) :
@@ -226,7 +226,7 @@
 
     <!-- Go to top button -->
 
-    <div id="gotoTop" class="fixed z-30 right-2 bottom-14 w-10 h-10 text-xl leading-10 text-center opacity-0 invisible bg-black bg-opacity-50 rounded-full cursor-pointer transition-all duration-700 [&.active]:opacity-100 [&.active]:visible text-white hover:bg-black">
+    <div id="gotoTop" class="fixed z-30 right-2 bottom-14 w-10 h-10 text-xl leading-10 text-center opacity-0 invisible bg-dark-150 bg-opacity-50 border border-beige rounded-full cursor-pointer transition-all duration-700 [&.active]:opacity-100 [&.active]:visible text-white hover:bg-black">
         <span class="icon-arrow-right -rotate-90 block translate-y-1.5 text-lg" aria-hidden="true"></span>
     </div>
 

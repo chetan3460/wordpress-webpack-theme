@@ -9,14 +9,14 @@ include(locate_template('template-parts/blocks/hide_cosmetics.php', false, false
 if ($case_studies_items && !$hide_block) :
 
 ?>
-    <section class="py-[6.25rem] px-16 max-xl:px-5 max-md:py-12  max-container fade-in case-studies-block_v1"
+    <section class="case-studies-block_v1 py-[6.25rem] px-16 max-xl:px-5 max-md:py-12  max-container fade-in "
         style="
     <?php if ($padding_top) { ?>padding-top: <?= $padding_top ?>px;<?php } ?><?php if ($padding_bottom) { ?>padding-bottom: <?= $padding_bottom ?>px <?php } ?>">
 
 
         <div class=" lg:flex block -mr-[0.063rem]  ">
             <div
-                class="sticky-sidebar block xxl:w-[33%] max-3xl:w-[calc(25%+1px)] max-lg:w-full  p-16 max-3xl:p-12 max-lg:p-0 max-lg:pb-14 border  border-light-border max-lg:border-0 -mb-[1px]">
+                class="sticky-sidebar block xxl:w-[33%] max-3xl:w-[calc(25%+1px)] max-lg:w-full  p-16 max-3xl:p-12 max-lg:p-0 max-lg:pb-14 border  border-beige/20 max-lg:border-0 -mb-[1px]">
 
                 <?php if ($subtitle || $heading) : ?>
                     <div class=" column two w-full min-w-[33%] sticky top-[7rem]">
@@ -66,7 +66,7 @@ if ($case_studies_items && !$hide_block) :
 
                         <article class=" group">
                             <div
-                                class=" relative flex border border-light-border -mb-[1px]  sm:group-odd:flex-row-reverse  max-sm:flex-col group">
+                                class=" relative flex border border-beige/20 -mb-[1px]  sm:group-odd:flex-row-reverse  max-sm:flex-col group">
 
                                 <!-- Image -->
                                 <div
@@ -81,7 +81,7 @@ if ($case_studies_items && !$hide_block) :
                                 <?php if ($case_title || $case_description) : ?>
                                     <!-- Description -->
                                     <div
-                                        class=" sm:w-[calc(50%+1px)] w-full lg:p-11 p-6 relative z-10 flex flex-col justify-between	sm:group-odd:border-r-light-border sm:group-odd:border-r-[1px]  sm:group-odd:border-l-light-border  sm:border-l-0 sm:group-even:border-l-[1px] group-even:border-l-light-border group-odd:-mr-[1px] group-even:-ml-[1px] gap-10">
+                                        class=" sm:w-[calc(50%+1px)] w-full lg:p-11 p-6 relative z-10 flex flex-col justify-between	sm:group-odd:border-r-beige/20 sm:group-odd:border-r-[1px]  sm:group-odd:border-l-beige/20  sm:border-l-0 sm:group-even:border-l-[1px] group-even:border-l-beige/20 group-odd:-mr-[1px] group-even:-ml-[1px] gap-10">
 
                                         <div class="">
 
