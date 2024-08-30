@@ -92,7 +92,7 @@
         </script>
 
         <!-- header start here -->
-        <header class="absolute w-full z-50 transition-[top] duration-700 mt-10 max-lg:mt-5 [&.top]:top-[-150px] [&.top]:fixed [&.sticky]:!top-[-20px] group">
+        <header class="header dark-mode absolute w-full z-50 transition-[top] duration-700 mt-10 max-lg:mt-5 [&.top]:top-[-150px] [&.top]:fixed [&.sticky]:!top-[-20px] group">
             <div class="max-container header-wrap px-16 max-xl:px-5 pb-10  max-lg:pb-10 max-lg:group-[&.top]:px-0 [clip-path:polygon(0%_100%,100%_100%,100%_100%,0%_100%)]">
                 <div class="header-inner relative lg:group-[&:not(.top)]:backdrop-blur-[0.625rem] lg:group-[&:not(.top)]:bg-[#D9D9D9] bg-darkblue   lg:group-[&:not(.top)]:bg-opacity-10 group-[&:not(.top)]:border-white/40 group-[&:not(.top)]:border-solid group-[&:not(.top)]:border py-6 max-lg:py-5 px-7 flex justify-between max-lg:bg-opacity-0 max-lg:border-white max-lg:border-solid max-lg:border max-lg:group-[&.top]:bg-darkblue max-lg:group-[&.top]:border-none lg:rounded-3xl">
                     <div class="overlay-cu lg:block absolute bg-black/30 w-full h-full top-0 left-0 overflow-hidden rounded-none lg:rounded-[25px] -z-10">
@@ -144,14 +144,14 @@
 
 
                     <!-- Site Logo -->
-                    <div class="logo left">
+                    <!-- <div class="logo left">
                         <?php
                         if (function_exists('the_custom_logo')) {
                             the_custom_logo();
                         }
                         ?>
+                    </div> -->
 
-                    </div>
                     <!-- Navigation -->
                     <div class="right flex items-center gap-5 max-xxl:gap-3  pr-[3.75rem] max-md:pr-12">
                         <?php

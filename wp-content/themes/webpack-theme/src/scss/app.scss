@@ -1032,7 +1032,7 @@ $container-width: 192rem; //resolve in 192x12.5px(fontsize) = 2400px
 
 // Header
 .header__logo {
-  height: 4.2rem;
+  // height: 4.2rem;
   margin-right: auto;
   transition: height 0.4s;
   display: flex;
@@ -1108,21 +1108,21 @@ $lg-max: ($lg-min - 1); // Large Desktop
   &.dark-mode {
     --header-txt: 255, 255, 255;
   }
-  background-color: rgba(var(--header-bg), 0);
-  padding: 3.2rem 0;
-  display: flex;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 991;
-  transition: all $dur-default ease;
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  // background-color: rgba(var(--header-bg), 0);
+  // padding: 3.2rem 0;
+  // display: flex;
+  // align-items: center;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
+  // z-index: 991;
+  // transition: all $dur-default ease;
+  // .container {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+  // }
   &__typo-1,
   &__typo-2 {
     overflow: hidden;
@@ -1130,10 +1130,10 @@ $lg-max: ($lg-min - 1); // Large Desktop
     transition: all 0.4s linear;
   }
   &__logo {
-    display: inline-block;
-    height: 4.2rem;
-    margin-right: auto;
-    display: flex;
+    // display: inline-block;
+    // height: 4.2rem;
+    // margin-right: auto;
+    // display: flex;
     transition: height $dur-default ease;
     &-shape {
       display: grid;
@@ -1143,7 +1143,7 @@ $lg-max: ($lg-min - 1); // Large Desktop
       z-index: 2;
       &-top {
         grid-area: 1/2/1/2;
-        color: rgba(var(--header-orange), 1) !important;
+        color: #ff471d;
       }
       &-bottom {
         grid-area: 1/2/1/2;
