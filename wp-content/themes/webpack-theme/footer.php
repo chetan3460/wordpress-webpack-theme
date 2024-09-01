@@ -10,7 +10,7 @@
     $follow = get_field('follow_us', 'option');
     ?>
 
-    <footer class="pt-[6.25rem] pb-[3.75rem] px-16 max-xl:px-5 max-md:pt-12 max-md:pb-12 bg-black ">
+    <footer class="pt-[6.25rem] pb-[3.75rem] px-16 max-xl:px-5 max-md:pt-12 max-md:pb-12 bg-darkblue ">
         <div class="max-container">
             <?php
             if ($question || $follow) :
@@ -203,7 +203,7 @@
                     <?php if ($footer_logo) : ?>
                         <a href="<?= get_home_url(); ?>"><img loading="lazy" src="<?= $footer_logo; ?>" alt="<?php bloginfo('name'); ?>" class="shrink-0 self-stretch max-w-full aspect-[1.85] w-[8.75rem]  !opacity-100"></a>
                     <?php endif; ?>
-                    <p class="mt-16 sl:text-right max-sl:mt-0">© <?php echo date("Y"); ?> Future Pipe Industries &nbsp;|&nbsp; All Rights Reserved</p>
+                    <p class="mt-16 sl:text-right max-sl:mt-0">© <?php echo date("Y"); ?> Creative Agency &nbsp;|&nbsp; All Rights Reserved</p>
 
                     <ul class="mt-16 flex gap-4 max-sl:hidden max-sl:mt-0 prose-a:transition-all prose-a:duration-700 [&>li>a:hover]:opacity-50">
                         <?php if (!empty($terms)) : ?>

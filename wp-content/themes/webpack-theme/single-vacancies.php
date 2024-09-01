@@ -12,7 +12,7 @@
         <section class="career-desc-block fade-in">
             <div class="max-container flex gap-10 max-md:gap-5 max-lg:flex-col">
                 <div class="col lg:w-[55%] max-6xl:pl-16 max-lg:px-5 lg:pt-[6.25rem] max-lg:pt-12">
-                    <div class="text-block">
+                    <div class="text-block ">
                         <?= the_content(); ?>
                     </div>
                 </div>

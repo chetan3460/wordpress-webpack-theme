@@ -1143,17 +1143,17 @@ $lg-max: ($lg-min - 1); // Large Desktop
       z-index: 2;
       &-top {
         grid-area: 1/2/1/2;
-        color: #ff471d;
+        color: #fff;
       }
       &-bottom {
         grid-area: 1/2/1/2;
-        color: rgba(var(--header-txt), 1) !important;
+        color: #fb9e3f;
       }
     }
     &-letter {
       position: relative;
       z-index: 1;
-      color: rgba(var(--header-txt), 1) !important;
+      color: #fff;
       transition: all 0.4s;
     }
     svg {
@@ -1592,4 +1592,141 @@ $lg-max: ($lg-min - 1); // Large Desktop
       }
     }
   }
+}
+// image shape block
+.images_shape_move_container {
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  bottom: 0;
+}
+.shape_contaner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../assets/images/services/service-landing-text-mask.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+}
+.shape_contaner .img2 {
+  z-index: 1;
+}
+//testimonial
+.sticky-over {
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 1025px) {
+  .sticky-scroll {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+  }
+}
+@media (min-width: 576px) {
+  .sticky-scroll {
+    right: 2.625vw;
+  }
+}
+.sticky-scroll {
+  position: absolute;
+  width: 8px;
+  height: 100vh;
+  top: 0;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  right: 2.625vw;
+  display: none;
+}
+.custom-scroll-el {
+  background: hsla(0, 0%, 100%, 0.1);
+  width: 8px;
+  height: 200px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.custom-scroll-el-scroller {
+  background: #545cff;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+}
+@media (min-width: 1025px) {
+  .sticky-over section {
+    min-height: 100vh;
+  }
+}
+@media (min-width: 768px) {
+  .bg-gradient-sides {
+    background-image: -webkit-radial-gradient(
+        -30% 21%,
+        circle,
+        #545cff 0,
+        transparent 30%
+      ),
+      -webkit-radial-gradient(120% 80%, circle, #545cff 0, transparent 30%);
+    background-image: -o-radial-gradient(
+        -30% 21%,
+        circle,
+        #545cff 0,
+        transparent 30%
+      ),
+      -o-radial-gradient(120% 80%, circle, #545cff 0, transparent 30%);
+    background-image: radial-gradient(
+        circle at -30%,
+        at 21%,
+        #545cff 0,
+        transparent 30%
+      ),
+      radial-gradient(circle at 120%, at 80%, #545cff 0, transparent 30%);
+    background-image: radial-gradient(
+        circle at -30% 21%,
+        #545cff 0,
+        transparent 30%
+      ),
+      radial-gradient(circle at 120% 80%, #545cff 0, transparent 30%);
+  }
+}
+.bg-gradient-sides {
+  background-image: -webkit-radial-gradient(
+      -30% 10%,
+      circle,
+      #545cff 0,
+      transparent 220px
+    ),
+    -webkit-radial-gradient(120% 90%, circle, #545cff 0, transparent 220px);
+  background-image: -o-radial-gradient(
+      -30% 10%,
+      circle,
+      #545cff 0,
+      transparent 220px
+    ),
+    -o-radial-gradient(120% 90%, circle, #545cff 0, transparent 220px);
+  background-image: radial-gradient(
+      circle at -30%,
+      at 10%,
+      #545cff 0,
+      transparent 220px
+    ),
+    radial-gradient(circle at 120%, at 90%, #545cff 0, transparent 220px);
+  background-image: radial-gradient(
+      circle at -30% 10%,
+      #545cff 0,
+      transparent 220px
+    ),
+    radial-gradient(circle at 120% 90%, #545cff 0, transparent 220px);
+}
+.bg-dark {
+  background-color: #111;
+  color: #fff;
 }

@@ -120,6 +120,33 @@ export default new (class App {
 
   bindEvents = () => {
 
+
+
+
+    // service image
+    gsap.to(".img1", {
+      x: -window.innerWidth / 4,
+      scrollTrigger: {
+        trigger: ".service-hero-section",
+        start: "center center",
+        end: `${window.innerHeight}`,
+        scrub: 1,
+        anticipatePin: 1,
+        invalidateOnRefresh: !0,
+      },
+    }),
+      gsap.to(".img2", {
+        x: window.innerWidth / 4,
+        scrollTrigger: {
+          trigger: ".service-hero-section",
+          start: "center center",
+          end: `${window.innerHeight}`,
+          scrub: 1,
+          anticipatePin: 1,
+          invalidateOnRefresh: !0,
+        },
+      });
+
     const lenis = new Lenis()
     function raf(time) {
       lenis.raf(time)
@@ -132,7 +159,7 @@ export default new (class App {
     }
 
 
-    // ----
+    // ----header logo
 
     const header = $('.header')
     let lastScrollTop = 0;
@@ -311,7 +338,7 @@ export default new (class App {
 
     // checkIfJobAvail()
 
-    // --------
+    // --------header logo
 
 
 
