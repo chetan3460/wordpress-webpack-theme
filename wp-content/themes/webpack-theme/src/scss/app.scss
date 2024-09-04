@@ -33,7 +33,21 @@ h5 {
   font-weight: 500;
   font-style: normal;
 }
+.section-colorway-img {
+  background: var(--bg-img) center / cover no-repeat;
+}
 
+@media (max-width: 1438px) and (min-width: 715px) {
+  .section-colorway-img {
+    background-image: var(--bg-img-medium, --bg-img);
+  }
+}
+
+@media (max-width: 714px) {
+  .section-colorway-img {
+    background-image: var(--bg-img-small, --bg-img-medium, --bg-img);
+  }
+}
 .max-container {
   @apply 6xl:w-[80vw] 6xl:m-auto 6xl:px-0;
 }
@@ -671,9 +685,9 @@ body {
 // ham Menu
 
 .ham-menu {
-  @apply opacity-0 pointer-events-none transition-all duration-700 [&.active]:opacity-100 [&.active]:pointer-events-auto absolute w-[34rem] right-0 bg-white rounded-2xl top-24 px-10 py-8 shadow-2xl shadow-darkblue/10 max-lg:hidden;
+  @apply opacity-0 pointer-events-none transition-all duration-700 [&.active]:opacity-100 [&.active]:pointer-events-auto absolute w-[34rem] right-0 bg-purple/75  backdrop-blur-[10px] backdrop-brightness-[1.2] rounded-2xl top-24 px-10 py-8 shadow-2xl shadow-darkblue/10 max-lg:hidden;
   ul {
-    @apply text-darkblue flex flex-col;
+    @apply text-navyblue flex flex-col;
     li {
       @apply border-b-[1px] border-lightblue;
       &:last-child {
@@ -684,7 +698,7 @@ body {
       }
       a {
         &:not(.primary-btn) {
-          @apply text-xl font-medium py-4 block   relative hover:after:bg-orange after:content-[''] after:duration-700 after:transition-all after:w-2.5 after:h-2.5 after:bg-lightblue after:absolute after:right-0 after:top-1/2 after:-translate-y-1/2;
+          @apply text-xl font-medium py-4 block   relative hover:after:bg-darkpurple after:content-[''] after:duration-700 after:transition-all after:w-2.5 after:h-2.5 after:bg-navyblue after:absolute after:right-0 after:top-1/2 after:-translate-y-1/2;
         }
       }
     }
@@ -704,7 +718,7 @@ body.mobile-tablet-device {
 }
 
 #menu-main-menu-header-1 > li > a {
-  @apply relative  after:content-[''] after:rounded-full after:-bottom-3 after:duration-700 after:transition-all after:w-1.5 after:h-1.5 after:bg-orange after:opacity-0 after:absolute after:right-1/2 after:translate-y-1/2 hover:text-white/50;
+  @apply relative  after:content-[''] after:rounded-full after:-bottom-3 after:duration-700 after:transition-all after:w-1.5 after:h-1.5 after:bg-darkpurple after:opacity-0 after:absolute after:right-1/2 after:translate-y-1/2 hover:text-darkpurple;
 }
 
 #menu-main-menu-header-1 > li.current-menu-item > a,

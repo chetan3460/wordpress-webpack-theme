@@ -73,7 +73,7 @@ function my_acf_json_save_point($path)
 
 function custom_logo_with_class($html)
 {
-    $html = str_replace('custom-logo', 'w-[40px] fillter invert', $html);
+    $html = str_replace('custom-logo', 'w-[40px] ', $html);
     return $html;
 }
 add_filter('get_custom_logo', 'custom_logo_with_class');

@@ -452,47 +452,48 @@ export default new (class App {
   };
 
 
+  // To be use if necessary on scroll show/hide header
 
-  windowScroll = () => {
-    const topOffset = this.window.scrollTop();
+  // windowScroll = () => {
+  //   const topOffset = this.window.scrollTop();
 
-    this.header.toggleClass('top', topOffset > 300);
-    this.header.toggleClass('sticky', topOffset > 600);
-    if (topOffset > this.previousScroll || topOffset < 500) {
-      this.header.removeClass('sticky');
-    } else if (topOffset < this.previousScroll) {
-      this.header.addClass('sticky');
-      // Additional checking so the header will not flicker
-      if (topOffset > 250) {
-        this.header.addClass('sticky');
-      } else {
-        this.header.removeClass('sticky');
-      }
-    }
+  //   this.header.toggleClass('top', topOffset > 300);
+  //   this.header.toggleClass('sticky', topOffset > 600);
+  //   if (topOffset > this.previousScroll || topOffset < 500) {
+  //     this.header.removeClass('sticky');
+  //   } else if (topOffset < this.previousScroll) {
+  //     this.header.addClass('sticky');
+  //     // Additional checking so the header will not flicker
+  //     if (topOffset > 250) {
+  //       this.header.addClass('sticky');
+  //     } else {
+  //       this.header.removeClass('sticky');
+  //     }
+  //   }
 
-    this.previousScroll = topOffset;
-    this.gotoTop.toggleClass(
-      'active',
-      this.window.scrollTop() > this.screenHeight / 2,
-    );
+  //   this.previousScroll = topOffset;
+  //   this.gotoTop.toggleClass(
+  //     'active',
+  //     this.window.scrollTop() > this.screenHeight / 2,
+  //   );
 
 
 
-    // Threejs
-    // if (this.modelViewer.length) {
-    //   this.modelViewer.each((_, el) => {
-    //     if (el.matches(".model-loaded.model-rotate-trigger")) {
-    //       if (inVP($(el))) {
-    //         el.autoRotate = true;
-    //         el.classList.add("rotating");
-    //       } else {
-    //         el.autoRotate = false;
-    //         el.classList.remove("rotating");
-    //       }
-    //     }
-    //   });
-    // }
-  };
+  //   // Threejs
+  //   // if (this.modelViewer.length) {
+  //   //   this.modelViewer.each((_, el) => {
+  //   //     if (el.matches(".model-loaded.model-rotate-trigger")) {
+  //   //       if (inVP($(el))) {
+  //   //         el.autoRotate = true;
+  //   //         el.classList.add("rotating");
+  //   //       } else {
+  //   //         el.autoRotate = false;
+  //   //         el.classList.remove("rotating");
+  //   //       }
+  //   //     }
+  //   //   });
+  //   // }
+  // };
 
   handleSplashScreen() {
     this.htmlBody.find('.logo-middle').fadeIn(500);

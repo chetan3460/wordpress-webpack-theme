@@ -15,7 +15,10 @@ module.exports = {
         '6xl': "2200px",
       },
       colors: {
-        darkblue: "#012555", //Dark Blue
+        darkblue: "#012555",
+        purple: "#E7DEFF",// Purple
+        darkpurple: '#aa8cff',
+        navyblue: "#030326",
         orange: '#FB9E3F',
         darkgray: '#333333', // Dark Gray
         lightblue: '#E0E8F4',
@@ -57,19 +60,19 @@ module.exports = {
   plugins: [
     require("@tailwindcss/typography"),
     plugin(({ addBase, addVariant, matchVariant, theme }) => {
-      // addBase({
-      //   body: {
-      //     color: theme("colors.black"),
-      //     background: theme("colors.white"),
-      //     // fontFamily: theme("fontFamily.inria"),
-      //     margin: "0",
-      //     fontWeight: "normal",
-      //     fontSmoothing: "antialiased",
-      //     "-webkit-font-smoothing": "antialiased",
-      //     "-moz-osx-font-smoothing": "grayscale",
-      //     overflowX: "hidden",
-      //   },
-      // });
+      addBase({
+        body: {
+          color: theme("colors.navyblue"),
+          background: theme("colors.white"),
+          // fontFamily: theme("fontFamily.inria"),
+          margin: "0",
+          fontWeight: "normal",
+          fontSmoothing: "antialiased",
+          "-webkit-font-smoothing": "antialiased",
+          "-moz-osx-font-smoothing": "grayscale",
+          overflowX: "hidden",
+        },
+      });
       addVariant("active", "&.active", "&.swiper-slide-active"),
 
         matchVariant("nth", (value) => `&:nth-child(${value})`, {
