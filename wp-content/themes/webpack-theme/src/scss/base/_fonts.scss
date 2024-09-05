@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Larken", serif;
+  src: url("../../../assets/fonts/Larken-Serif/LarkenDEMO-Regular.otf")
+      format("opentype"),
+    url("../../../assets/fonts/Larken-Serif/LarkenDEMO-Regular.otf")
+      format("woff2"),
+    url(".../../../assets/fonts/Larken-Serif/LarkenDEMO-Regular.otf")
+      format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Larken", sans-serif;
+  src: url("../../../assets/fonts/Larken-Serif/LarkenDEMO-ExtraBold.otf")
+    format("opentype");
+  font-style: normal;
+  font-weight: 800;
+}

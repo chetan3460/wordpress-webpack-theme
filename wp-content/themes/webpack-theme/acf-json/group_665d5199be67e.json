@@ -7817,6 +7817,79 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_66d88b1a5f235": {
+                    "key": "layout_66d88b1a5f235",
+                    "name": "banner_block_v2",
+                    "label": "Banner Block V2",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_66d88b3b5f237",
+                            "label": "Banner Subtitle",
+                            "name": "banner_subtitle",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_66d88b5f5f238",
+                            "label": "Banner Title",
+                            "name": "banner_title",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "rows": "",
+                            "placeholder": "",
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_66d88b6a5f239",
+                            "label": "Banner Description",
+                            "name": "banner_description",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "allow_in_bindings": 0,
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -7947,5 +8020,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1725199269
+    "modified": 1725467532
 }

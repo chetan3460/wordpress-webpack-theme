@@ -17,3 +17,133 @@
 
     </div>
 </section>
+<style>
+    .banner--simple {
+        padding: calc(var(--spacing-large, 120px) + var(--header-height, 100px)) 0 var(--spacing-large, 120px);
+        text-align: center;
+        background-color: #fff;
+        --text-color: #030326;
+        --heading-color: #030326;
+        --border-color: ;
+    }
+
+    .banner__inner {
+        max-width: var(--section-large, 1438px);
+        width: 92%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .banner__subtitle {
+        max-width: var(--section-small, 942px);
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: .2em;
+        line-height: 120%;
+        font-size: var(--text-tiny, 1rem);
+    }
+
+    .banner__title.h1 {
+        font-family: "larken", serif;
+        font-weight: 800;
+        color: var(--heading-color, #030326);
+        text-transform: uppercase;
+        line-height: 95%;
+        vertical-align: text-bottom;
+        line-height: 60%;
+    }
+
+    @media screen and (prefers-reduced-motion: no-preference) {
+
+        [data-animate=words]>*,
+        [data-animate=words] .heading-word,
+        [data-animate=words] .heading-word__inner {
+            display: inline-block;
+            line-height: 95%;
+        }
+    }
+
+    @media screen and (prefers-reduced-motion: no-preference) {
+        [data-animate=words] .heading-word {
+            -webkit-clip-path: polygon(0 -10%, 100% -10%, 100% 110%, 0% 110%);
+            clip-path: polygon(0 -10%, 100% -10%, 100% 110%, 0% 110%);
+        }
+    }
+
+    @media screen and (prefers-reduced-motion: no-preference) {
+        [data-animate=words][data-animated]>*:nth-child(1) .heading-word__inner {
+            transition: transform cubic-bezier(0.165, 0.84, 0.44, 1) 1s 0s;
+        }
+    }
+
+    @media screen and (prefers-reduced-motion: no-preference) {
+        [data-animate=words][data-animated]>*:nth-child(2) .heading-word__inner {
+            transition: transform cubic-bezier(0.165, 0.84, 0.44, 1) 1s .1s;
+        }
+    }
+
+
+    .h1,
+    em {
+        font-family: 'Larken', sans-serif;
+
+        display: inline-block;
+        position: relative;
+        color: #aa8cff;
+        font-style: normal;
+        font-size: 132px;
+        font-weight: 800;
+        line-height: 79.2px;
+    }
+
+    .scribble--2 {
+        --dasharray: 1350px;
+        align-items: center;
+    }
+
+    .scribble {
+        width: 105%;
+        height: 100%;
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: -2.5%;
+        pointer-events: none;
+        mix-blend-mode: darken;
+        --dasharray: 1350px;
+        align-items: center;
+    }
+
+    svg {
+        width: 100%;
+        height: auto;
+        display: block;
+        overflow: visible;
+    }
+
+    @media screen and (prefers-reduced-motion: no-preference) {
+        [data-animate=words][data-animated]>*:nth-child(2) .scribble path {
+            transition: stroke-dashoffset ease 1.2s .6s;
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @media (min-width: 769px) {
+        .scribble path {
+            stroke-width: calc(4px* var(--stroke, 1)) !important;
+        }
+    }
+
+    .scribble path {
+        stroke-dasharray: 1350px;
+    }
+
+    @media screen and (prefers-reduced-motion: no-preference) {
+        [data-animate=words][data-animated]>*:nth-child(3) .heading-word__inner {
+            transition: transform cubic-bezier(0.165, 0.84, 0.44, 1) 1s .2s;
+        }
+    }
+</style>
