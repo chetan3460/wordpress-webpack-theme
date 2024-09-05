@@ -43,7 +43,7 @@ if (($sub_title || $heading) && !$hide_block) :
 
                                             <?php if ($number) : ?>
                                                 <hr class="shrink-0 mt-8 max-md:mt-5 h-px  bg-black bg-opacity-10" />
-                                                <p class="mt-6 max-md:mt-5 text-[6.875rem] max-md:text-[4rem] max-md:leading-[4rem] capitalize leading-[6rem]  text-darkblue md:group-[&.active]:text-orange transition-all duration-700 active"><?= $number; ?></p>
+                                                <p class="mt-6 max-md:mt-5 text-[6.875rem] max-md:text-[4rem] max-md:leading-[4rem] capitalize leading-[6rem]  text-darkblue md:group-[&.active]:text-darkpurple transition-all duration-700 active"><?= $number; ?></p>
                                             <?php endif; ?>
 
                                             <?php if ($description) : ?>
@@ -89,7 +89,7 @@ if (($sub_title || $heading) && !$hide_block) :
 
                                             <?php if ($number) : ?>
                                                 <hr class="shrink-0 mt-8 max-md:mt-5 h-px  bg-black bg-opacity-10" />
-                                                <p class="mt-6 max-md:mt-5 text-[6.875rem] max-md:text-[4rem] max-md:leading-[4rem] capitalize leading-[6rem]  text-darkblue md:group-[&.active]:text-orange transition-all duration-700 active"><?= $number; ?></p>
+                                                <p class="mt-6 max-md:mt-5 text-[6.875rem] max-md:text-[4rem] max-md:leading-[4rem] capitalize leading-[6rem]  text-darkblue md:group-[&.active]:text-darkpurple transition-all duration-700 active"><?= $number; ?></p>
                                             <?php endif; ?>
 
                                             <?php if ($description) : ?>

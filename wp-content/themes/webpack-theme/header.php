@@ -119,7 +119,7 @@
                                     'theme_location' => 'main-menu',
                                     'container' => false,
                                     'menu_class' => ' flex gap-10 mr-10 max-xxl:mr-3  max-xxl:gap-6 max-lg:hidden font-medium',
-                                    'add_a_class'     => 'duration-700 transition-all  text-[0.875rem] 4xl:text-base',
+                                    'add_a_class'     => 'duration-700 transition-all  text-base 4xl:text-base',
                                     'walker'         => new Mega_Menu_Walker(),
                                     // 'depth' => 3,
                                     // 'walker' => new categoryImage_Walker_Menu()

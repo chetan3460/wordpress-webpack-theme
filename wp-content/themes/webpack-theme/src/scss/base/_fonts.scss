@@ -1,19 +1,81 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * elza:
+ *   - http://typekit.com/eulas/00000000000000007735f906
+ *   - http://typekit.com/eulas/00000000000000007735f910
+ * larken:
+ *   - http://typekit.com/eulas/0000000000000000774c4d89
+ *   - http://typekit.com/eulas/0000000000000000774c4d91
+ *
+ * © 2009-2024 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2024-04-26 08:09:30 UTC"}*/
+
+@import url("https://p.typekit.net/p.css?s=1&k=jey2hzm&ht=tk&f=49086.49089.52626.52633&a=1016362&app=typekit&e=css");
+
 @font-face {
-  font-family: "Larken", serif;
-  src: url("../../../assets/fonts/Larken-Serif/LarkenDEMO-Regular.otf")
-      format("opentype"),
-    url("../../../assets/fonts/Larken-Serif/LarkenDEMO-Regular.otf")
+  font-family: "elza";
+  src: url("https://use.typekit.net/af/9ca581/00000000000000007735f906/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3")
       format("woff2"),
-    url(".../../../assets/fonts/Larken-Serif/LarkenDEMO-Regular.otf")
-      format("woff");
+    url("https://use.typekit.net/af/9ca581/00000000000000007735f906/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/9ca581/00000000000000007735f906/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3")
+      format("opentype");
+  font-display: swap;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
+  font-stretch: normal;
 }
 
 @font-face {
-  font-family: "Larken", sans-serif;
-  src: url("../../../assets/fonts/Larken-Serif/LarkenDEMO-ExtraBold.otf")
-    format("opentype");
+  font-family: "elza";
+  src: url("https://use.typekit.net/af/dc955e/00000000000000007735f910/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/dc955e/00000000000000007735f910/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/dc955e/00000000000000007735f910/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+      format("opentype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "larken";
+  src: url("https://use.typekit.net/af/dbfffe/0000000000000000774c4d89/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n8&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/dbfffe/0000000000000000774c4d89/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n8&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/dbfffe/0000000000000000774c4d89/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n8&v=3")
+      format("opentype");
+  font-display: swap;
   font-style: normal;
   font-weight: 800;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "larken";
+  src: url("https://use.typekit.net/af/61489c/0000000000000000774c4d91/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n4&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/61489c/0000000000000000774c4d91/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n4&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/61489c/0000000000000000774c4d91/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n4&v=3")
+      format("opentype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+.tk-elza {
+  font-family: "elza", sans-serif;
+}
+.tk-larken {
+  font-family: "larken", sans-serif;
 }

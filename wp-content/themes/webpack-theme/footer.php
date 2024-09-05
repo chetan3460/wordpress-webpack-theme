@@ -10,7 +10,7 @@
     $follow = get_field('follow_us', 'option');
     ?>
 
-    <footer class="pt-[6.25rem] pb-[3.75rem] px-16 max-xl:px-5 max-md:pt-12 max-md:pb-12 bg-darkblue ">
+    <footer class="pt-[6.25rem] pb-[3.75rem] px-16 max-xl:px-5 max-md:pt-12 max-md:pb-12 bg-navyblue ">
         <div class="max-container">
             <?php
             if ($question || $follow) :
@@ -30,12 +30,12 @@
                             <div class="flex flex-col w-6/12 max-lg:w-full">
                                 <div class="flex flex-col grow px-8 py-9 max-md:p-5 w-full bg-white bg-opacity-10">
                                     <?php if ($question_subtitle) : ?>
-                                        <p class="text-base leading-4 text-white uppercase"><?= $question_subtitle; ?></p>
+                                        <p class="text-base leading-4 text-purple uppercase"><?= $question_subtitle; ?></p>
                                     <?php endif; ?>
                                     <?php if ($heading || $question_btn) : ?>
                                         <div class="flex gap-5 justify-between mt-4 w-full max-md:flex-col">
                                             <?php if ($heading) : ?>
-                                                <h3 class="my-auto text-3xl max-md:text-2xl font-medium leading-9 text-white capitalize"><?= $heading; ?></h3>
+                                                <h3 class="my-auto text-3xl max-md:text-2xl font-medium leading-9 text-purple capitalize"><?= $heading; ?></h3>
                                             <?php endif; ?>
                                             <?php if ($question_btn) : ?>
                                                 <div class="flex gap-1.5">
@@ -69,17 +69,17 @@
 
                                 <div class="flex flex-col grow px-8 py-9 max-md:p-5 w-full bg-white bg-opacity-10">
                                     <?php if ($follow_subtitle) : ?>
-                                        <p class="text-base leading-4 text-white uppercase"><?= $follow_subtitle; ?></p>
+                                        <p class="text-base leading-4 text-purple uppercase"><?= $follow_subtitle; ?></p>
                                     <?php endif; ?>
                                     <?php if ($heading || $social_links) : ?>
                                         <div class="flex gap-5 justify-between mt-4 w-full max-md:flex-col">
 
                                             <?php if ($heading) : ?>
-                                                <h3 class="my-auto text-3xl max-md:text-2xl font-medium leading-9 text-white capitalize"><?= $heading; ?></h3>
+                                                <h3 class="my-auto text-3xl max-md:text-2xl font-medium leading-9 text-purple capitalize"><?= $heading; ?></h3>
                                             <?php endif; ?>
 
                                             <?php if ($social_links) : ?>
-                                                <div class="flex gap-[1.125rem] py-0.5 text-white">
+                                                <div class="flex gap-[1.125rem] py-0.5 text-purple">
                                                     <?php if ($instagram) : ?>
                                                         <a aria-label="Instagram" href="<?= $instagram ?>" target="_blank" class="flex justify-center items-center p-2.5 bg-white bg-opacity-20 h-[2.625rem] rounded-full w-[2.625rem] text-[1.125rem] group transition-all duration-700 hover:bg-white hover:text-darkblue">
                                                             <span class="icon-instagram"></span>
@@ -119,7 +119,7 @@
                 <div class="flex gap-5 justify-between mt-20 max-md:flex-col">
                     <div class="flex flex-col  w-[38rem] max-lg:w-full">
 
-                        <h2 class="text-3xl max-md:text-2xl font-medium leading-9 text-white capitalize mb-12 max-md:mb-10">Quick Links</h2>
+                        <h2 class="text-3xl max-md:text-2xl font-medium leading-9 text-purple capitalize mb-12 max-md:mb-10">Quick Links</h2>
 
                         <div class="block">
                             <div class="flex md:gap-5 max-lg:flex-col">
@@ -168,7 +168,7 @@
                             $theme_location = 'footer-menu_4';
                         ?>
 
-                            <h2 class="text-3xl max-md:text-2xl font-medium leading-9 capitalize text-white mb-12 max-md:mb-10"><?php _e(wp_get_nav_menu_name($theme_location)); ?></h2>
+                            <h2 class="text-3xl max-md:text-2xl font-medium leading-9 capitalize text-purple mb-12 max-md:mb-10"><?php _e(wp_get_nav_menu_name($theme_location)); ?></h2>
                             <?= transient_footerMenu($theme_location); ?>
 
                         <?php endif; ?>
@@ -190,7 +190,7 @@
             }
             if (!empty($terms) || !empty($policy)) :
             ?>
-                <div class="flex max-sl:flex-col max-sl:gap-10 gap-5 justify-between sl:items-end  mt-[12.5rem] max-md:mt-20 text-sm leading-4 text-white">
+                <div class="flex max-sl:flex-col max-sl:gap-10 gap-5 justify-between sl:items-end  mt-[12.5rem] max-md:mt-20 text-sm leading-4 text-purple">
 
                     <ul class="mt-16 flex gap-4 sl:hidden max-sl:mt-0">
                         <?php if (!empty($terms)) : ?>
@@ -226,7 +226,7 @@
 
     <!-- Go to top button -->
 
-    <div id="gotoTop" class="fixed z-30 right-2 bottom-14 w-10 h-10 text-xl leading-10 text-center opacity-0 invisible bg-dark-100  border border-beige rounded-full cursor-pointer transition-all duration-700 [&.active]:opacity-100 [&.active]:visible text-white hover:bg-black">
+    <div id="gotoTop" class="fixed z-30 right-2 bottom-14 w-10 h-10 text-xl leading-10 text-center opacity-0 invisible bg-dark-100  border border-beige rounded-full cursor-pointer transition-all duration-700 [&.active]:opacity-100 [&.active]:visible text-purple hover:bg-black">
         <span class="icon-arrow-right -rotate-90 block translate-y-1.5 text-lg" aria-hidden="true"></span>
     </div>
 
@@ -236,7 +236,7 @@
     </div>
 
     <div id="magic-cursor" class="absolute z-50 left-0 top-0 pointer-events-none max-lg:hidden">
-        <div class="cursor flex items-center justify-center  fixed w-12 h-12 bg-darkblue text-white rounded-full scale-0">
+        <div class="cursor flex items-center justify-center  fixed w-12 h-12 bg-darkblue text-purple rounded-full scale-0">
             <span class="icon-arrow-right "></span>
         </div>
     </div>

@@ -16,12 +16,12 @@ if ($tabs && !$hide_block) :
                 <div class="col sl:w-[45%] max-6xl:px-16 max-xl:px-5">
                     <div class="sl:max-w-[30vw]">
                         <?php if ($heading) : ?>
-                            <h2 class="text-6xl max-md:text-3xl font-medium capitalize leading-[4rem]  max-md:leading-9">
+                            <h2 class="text-6xl max-md:text-3xl  leading-[4rem]  max-md:leading-9">
                                 <?= $heading; ?>
                             </h2>
                         <?php endif; ?>
                         <?php if ($description) : ?>
-                            <p class="mt-8 max-md:mt-5 text-xl max-md:text-base leading-8 max-md:leading-6 opacity-50">
+                            <p class="mt-8 max-md:mt-5 text-xl max-md:text-base leading-8 max-md:leading-6 ">
                                 <?= $description; ?>
                             </p>
                         <?php endif; ?>
@@ -36,49 +36,50 @@ if ($tabs && !$hide_block) :
                     <div class="flex flex-col lg:w-max max-6xl:pl-16 max-xl:pl-5">
                         <div class="flex flex-col grow ">
                             <div class="free-slider flex gap-3 justify-between items-start   text-base text-center   max-xxl:gap-3 max-xxl:text-[0.875rem] ">
-                                <div class="swiper-wrapper  w-max  border border-black/10 p-2 rounded-md max-md:border-r-0 max-md:rounded-r-none">
-                                    <?php foreach($tabs as $key => $row ) {
+                                <div class="swiper-wrapper  w-max  border border-darkpurple/30 p-2 rounded-md max-md:border-r-0 max-md:rounded-r-none">
+                                    <?php foreach ($tabs as $key => $row) {
                                         $tab_title = $row['tab_title'];
-                                        if($tab_title):
-                                        ?>
-                                        <div class="swiper-slide last:!m-0 w-max flex justify-between  hover:cursor-pointer  relative p-3 rounded-md  transition-colors duration-700  <?php echo ($key == 0) ? 'active': '';?> group [&.active]:bg-darkblue [&.active]:text-white  max-md:after:!w-0 hover:bg-darkblue hover:text-white">
-                                            <h3 class="flex-1 my-auto font-medium capitalize leading-[120%]"><?= $tab_title;?></h3>
-                                        </div>
-                                    <?php endif; } ?>
+                                        if ($tab_title):
+                                    ?>
+                                            <div class="swiper-slide last:!m-0 w-max flex justify-between  hover:cursor-pointer  relative p-3 rounded-md  transition-colors duration-700  <?php echo ($key == 0) ? 'active' : ''; ?> group [&.active]:bg-darkblue [&.active]:text-white  max-md:after:!w-0 hover:bg-darkblue hover:text-white">
+                                                <h3 class="flex-1 my-auto font-elza font-medium capitalize  leading-[120%]"><?= $tab_title; ?></h3>
+                                            </div>
+                                    <?php endif;
+                                    } ?>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Tab content -->
-                    <?php if( have_rows('tabs') ): ?>
-                    <div class="tab-content">
-                        <div class="swiper-wrapper">
-                             <?php while( have_rows('tabs') ): the_row();
-                             ?>
-                            <div class="swiper-slide max-6xl:px-16 max-xl:px-5 !opacity-0 [&.swiper-slide-active]:!opacity-100 [&.swiper-slide-active]:!delay-700">
-                            <?php
-                                // Sub repeater
-                                $lists = get_sub_field('lists');
-                                if ($lists) {
-                                foreach ($lists as $key => $list) {
-                                    $list_item = $list['heading'];
-                                    if ($list_item) :
+                    <?php if (have_rows('tabs')): ?>
+                        <div class="tab-content">
+                            <div class="swiper-wrapper">
+                                <?php while (have_rows('tabs')): the_row();
                                 ?>
-                                    <div class="col flex items-center  gap-7 border-b-[1px] border-lightblue py-10 max-md:py-7 md:pr-[10%]">
-                                        <span class="w-14 h-14 bg-lightblue flex-none flex items-center justify-center font-medium">0<?= $key + 1;?></span>
-                                        <p class="text-xl max-md:text-base leading-7 max-md:leading-6  font-medium"><?= $list_item;?></p>
+                                    <div class="swiper-slide max-6xl:px-16 max-xl:px-5 !opacity-0 [&.swiper-slide-active]:!opacity-100 [&.swiper-slide-active]:!delay-700">
+                                        <?php
+                                        // Sub repeater
+                                        $lists = get_sub_field('lists');
+                                        if ($lists) {
+                                            foreach ($lists as $key => $list) {
+                                                $list_item = $list['heading'];
+                                                if ($list_item) :
+                                        ?>
+                                                    <div class="col flex items-center  gap-7 border-b-[1px] border-purple py-10 max-md:py-7 md:pr-[10%]">
+                                                        <span class="w-14 h-14 bg-purple flex-none flex items-center justify-center font-medium">0<?= $key + 1; ?></span>
+                                                        <p class="text-xl max-md:text-base leading-7 max-md:leading-6  font-medium"><?= $list_item; ?></p>
+                                                    </div>
+                                        <?php
+                                                endif;
+                                            }
+                                        }
+                                        ?>
                                     </div>
-                                <?php
-                                        endif;
-                                    }
-                                }
-                                ?>
+                                <?php endwhile; ?>
                             </div>
-                             <?php endwhile; ?>
-                        </div>
-                    </div><!-- Tab content ends -->
-                    <?php endif;?>
+                        </div><!-- Tab content ends -->
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

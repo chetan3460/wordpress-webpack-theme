@@ -341,6 +341,7 @@ export default new (class App {
     // --------header logo
 
 
+    // svg 
 
 
     // Window Events
@@ -450,6 +451,7 @@ export default new (class App {
       this.pushDiv.height(this.footerHeight);
     }
   };
+
 
 
   // To be use if necessary on scroll show/hide header

@@ -21,7 +21,7 @@ if (($heading || $sub_title || $news_query->have_posts()) && !$hide_block) :
 
 ?>
 
-    <section class="py-[6.25rem]   max-md:py-12 bg-lightblue  " style="<?php if ($padding_top) { ?>padding-top: <?= $padding_top ?>px; <?php } ?><?php if ($padding_bottom) { ?>padding-bottom: <?= $padding_bottom ?>px <?php } ?>">
+    <section class="py-[6.25rem]   max-md:py-12 bg-purple  " style="<?php if ($padding_top) { ?>padding-top: <?= $padding_top ?>px; <?php } ?><?php if ($padding_bottom) { ?>padding-bottom: <?= $padding_bottom ?>px <?php } ?>">
         <div class="max-container">
             <?php if ($heading || $sub_title) : ?>
                 <div class="flex gap-5 justify-between  w-full max-md:flex-wrap max-md:max-w-full max-6xl:px-16 max-xl:px-5 fade-in">
@@ -51,12 +51,12 @@ if (($heading || $sub_title || $news_query->have_posts()) && !$hide_block) :
                     <?php if ($news_query->have_posts()) : ?>
                         <div class="flex gap-5 ">
 
-                            <div class="flex  w-[27%] bg-lightblue h-auto z-20 relative items-end flex-wrap max-md:hidden ml-16 max-xl:ml-5">
+                            <div class="flex  w-[27%] bg-purple h-auto z-20 relative items-end flex-wrap max-md:hidden ml-16 max-xl:ml-5">
                                 <div class="btn-wrap  flex justify-end gap-3 mb-8">
-                                    <button class="swiper-btn-prev flex items-center justify-center border-darkblue border-solid border rounded-full w-[2.8rem] h-[2.8rem] transition-all duration-700 hover:bg-darkblue hover:text-white [&.swiper-button-disabled]:pointer-events-none" aria-label="left slide arrow">
+                                    <button class="swiper-btn-prev flex items-center justify-center border-darkblue border-solid border rounded-full w-[2.8rem] h-[2.8rem] transition-all duration-700 hover:bg-darkblue hover:text-navyblue [&.swiper-button-disabled]:pointer-events-none" aria-label="left slide arrow">
                                         <span class="icon-arrow-left"></span>
                                     </button>
-                                    <button class="swiper-btn-next flex items-center justify-center border-darkblue border-solid border rounded-full w-[2.8rem] h-[2.8rem] transition-all duration-700 hover:bg-darkblue hover:text-white [&.swiper-button-disabled]:pointer-events-none" aria-label="right slide arrow">
+                                    <button class="swiper-btn-next flex items-center justify-center border-darkblue border-solid border rounded-full w-[2.8rem] h-[2.8rem] transition-all duration-700 hover:bg-darkblue hover:text-navyblue [&.swiper-button-disabled]:pointer-events-none" aria-label="right slide arrow">
                                         <span class="icon-arrow-right"></span>
                                     </button>
                                 </div>

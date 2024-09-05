@@ -16,7 +16,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "elza", sans-serif;
   font-weight: 400;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
@@ -29,9 +29,10 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-family: "larken", sans-serif;
+  font-weight: 800;
   font-style: normal;
+  text-transform: uppercase;
 }
 .section-colorway-img {
   background: var(--bg-img) center / cover no-repeat;
@@ -42,7 +43,8 @@ h5 {
     background-image: var(--bg-img-medium, --bg-img);
   }
 }
-47r8t9 @media (max-width: 714px) {
+
+@media (max-width: 714px) {
   .section-colorway-img {
     background-image: var(--bg-img-small, --bg-img-medium, --bg-img);
   }
@@ -364,15 +366,15 @@ body {
       }
     }
   }
-  &.blue-header {
-    header {
-      .header-wrap {
-        .header-inner {
-          @apply bg-darkblue backdrop-blur-[0] border-none;
-        }
-      }
-    }
-  }
+  // &.blue-header {
+  //   header {
+  //     .header-wrap {
+  //       .header-inner {
+  //         @apply bg-darkblue backdrop-blur-[0] border-none;
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 // Input
@@ -1362,7 +1364,7 @@ $lg-max: ($lg-min - 1); // Large Desktop
 
 @include md {
   .header {
-    padding: 4rem 0;
+    // padding: 4rem 0;
     &__logo {
       margin-right: 0.9rem;
     }
@@ -1383,84 +1385,12 @@ $lg-max: ($lg-min - 1); // Large Desktop
         background: rgba($cl-white, 0.05);
       }
     }
-    // &.open-nav {
-    //   .header__toggle {
-    //     background-color: rgba($cl-white, 0);
-    //   }
-    //   .header__toggle-icon {
-    //     background-color: $cl-white;
-    //     @include transition(0.3s ease-out);
-    //   }
-
-    //   .header__nav {
-    //     opacity: 1;
-    //     pointer-events: auto;
-    //     @include transition(0.49s ease-out);
-    //     &-item {
-    //       &:nth-child(1) {
-    //         --nav-delay-index: 1;
-    //       }
-    //       &:nth-child(2) {
-    //         --nav-delay-index: 3;
-    //       }
-    //       &:nth-child(3) {
-    //         --nav-delay-index: 2;
-    //       }
-    //       &:nth-child(4) {
-    //         --nav-delay-index: 4;
-    //       }
-    //       &:nth-child(5) {
-    //         --nav-delay-index: 5;
-    //       }
-    //     }
-    //     &-link {
-    //       opacity: 1;
-    //       clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-    //       transition: opacity 0.4s ease-out
-    //           (
-    //             calc(
-    //               var(--nav-trans-dur) +
-    //                 (var(--nav-delay-stagger) * var(--nav-delay-index))
-    //             )
-    //           ),
-    //         clip-path 0.4s ease-out
-    //           (
-    //             calc(
-    //               var(--nav-trans-dur) +
-    //                 (var(--nav-delay-stagger) * var(--nav-delay-index))
-    //             )
-    //           );
-    //     }
-    //   }
-    //   .header__toggle {
-    //     &-icon {
-    //       &-2 {
-    //         opacity: 0;
-    //         left: 50%;
-    //         @include transform(scaleX(0.5));
-    //         @include transform-origin(right);
-    //       }
-    //       &-1 {
-    //         top: 50%;
-    //         @include transition-delay(0.04s);
-    //         @include transform(rotate(45deg));
-    //       }
-    //       &-3 {
-    //         left: 0;
-    //         width: 45.45%;
-    //         top: 50%;
-    //         @include transition-delay(0.1s);
-    //         @include transform(rotate(-45deg));
-    //       }
-    //     }
-    //   }
-    // }
   }
 }
 
 @include sm {
   .header {
-    padding: 2rem 0;
+    // padding: 2rem 0;
     &__logo {
       height: 2.6rem;
     }

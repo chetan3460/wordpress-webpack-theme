@@ -15,13 +15,13 @@ include(locate_template('template-parts/blocks/hide_cosmetics.php', false, false
 if ($values && !$hide_block) :
 ?>
 
-    <section class="pt-[6.25rem]   max-md:pt-12 bg-aliceblue sticky-anim-block" style="<?php if ($padding_top) { ?>padding-top: <?= $padding_top ?>px <?php } ?><?php if ($padding_bottom) { ?>padding-bottom: <?= $padding_bottom ?>px <?php } ?>">
+    <section class="pt-[6.25rem]   max-md:pt-12 bg-purple sticky-anim-block" style="<?php if ($padding_top) { ?>padding-top: <?= $padding_top ?>px <?php } ?><?php if ($padding_bottom) { ?>padding-bottom: <?= $padding_bottom ?>px <?php } ?>">
         <div class="max-container fade-in">
             <?php if ($heading || $cta) : ?>
                 <div class="flex gap-5 justify-between items-center  w-full max-md:flex-wrap max-md:max-w-full px-16 max-xl:px-5 fade-in pb-2">
                     <?php if ($heading) : ?>
                         <div class="flex flex-col text-black max-md:max-w-full">
-                            <h2 class="text-6xl leading-[4rem] max-md:text-[2.5rem] max-md:leading-[3rem]  font-medium capitalize"><?= $heading; ?></h2>
+                            <h2 class="text-6xl leading-[4rem] max-md:text-[2.5rem] max-md:leading-[3rem]   "><?= $heading; ?></h2>
                         </div>
                     <?php endif; ?>
                     <?php if ($cta) : ?>
@@ -56,7 +56,7 @@ if ($values && !$hide_block) :
                                     <div class="flex flex-col w-[81%] ">
                                         <div class="flex flex-col grow text-black max-md:mt-10 max-md:max-w-full">
                                             <?php if ($title) : ?>
-                                                <h2 class="text-6xl font-medium capitalize leading-[60px] max-md:max-w-full max-md:text-4xl">
+                                                <h2 class="text-6xl   leading-[60px] max-md:max-w-full max-md:text-4xl">
                                                     <?= $title; ?>
                                                 </h2>
                                             <?php endif; ?>

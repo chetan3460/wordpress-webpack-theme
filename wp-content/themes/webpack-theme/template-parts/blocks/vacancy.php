@@ -15,7 +15,7 @@ if ($select_vacancy && !$hide_block) :
 
 ?>
 
-    <section class="career-block-wrap py-[6.25rem] max-md:py-12 px-16 max-xl:px-5 fade-in lightblue-bg" style="<?php if ($padding_top) { ?>padding-top: <?= $padding_top ?>px <?php } ?><?php if ($padding_bottom) { ?>padding-bottom: <?= $padding_bottom ?>px <?php } ?>">
+    <section class="career-block-wrap py-[6.25rem] max-md:py-12 px-16 max-xl:px-5 fade-in bg-purple" style="<?php if ($padding_top) { ?>padding-top: <?= $padding_top ?>px <?php } ?><?php if ($padding_bottom) { ?>padding-bottom: <?= $padding_bottom ?>px <?php } ?>">
         <div class="max-container">
             <?php if ($heading || $cta) : ?>
                 <div class="flex gap-5 mb-14 max-md:mb-8 justify-between items-end  w-full max-sl:flex-col max-sl:items-start max-md:flex-wrap max-md:max-w-full">
@@ -42,7 +42,7 @@ if ($select_vacancy && !$hide_block) :
                     <?php include(locate_template('template-parts/parts/vacancy_card.php', false, false)); ?>
                 <?php endforeach;
                 wp_reset_postdata();
-                 ?>
+                ?>
             </div>
         </div>
     </section>

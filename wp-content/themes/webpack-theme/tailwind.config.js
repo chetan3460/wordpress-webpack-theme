@@ -15,7 +15,7 @@ module.exports = {
         '6xl': "2200px",
       },
       colors: {
-        darkblue: "#012555",
+        darkblue: "#030326",
         purple: "#E7DEFF",// Purple
         darkpurple: '#aa8cff',
         navyblue: "#030326",
@@ -29,17 +29,13 @@ module.exports = {
         mediumblue: '#345177',
         black: '#000',
         "black-light": '#181a1b',
-        "dark": {
-          "50": "#222425",
-          "75": "#181a1b",
-          "100": "#212121",
-          "150": "#141414"
 
-        },
         "light-border": '#353535',
-        white: '#fff',
-        beige: '#ccbda8',
-        gold: '#84704b'
+
+      },
+      fontFamily: {
+        elza: ["elza", "sans-serif"],
+        larken: ["larken", "sans-serif"],
       },
     },
     // typography: ({ theme }) => ({

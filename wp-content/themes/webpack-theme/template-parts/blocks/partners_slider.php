@@ -15,11 +15,11 @@ include(locate_template('template-parts/blocks/hide_cosmetics.php', false, false
 if ($partners_items && !$hide_block) :
 ?>
 
-    <section class="partner-slider-block bg-purple home-part  max-container fade-in  w-full  partner-slider pb-[6.25rem] rounded-[30px]">
+    <section class="partner-slider-block bg-purple home-part  max-container fade-in  w-full  partner-slider pb-[6.25rem] rounded-[30px] -mt-8">
         <div class="">
             <div class="home-part__head  py-[6.25rem] px-16 max-xl:px-5 max-md:py-12">
                 <div
-                    class="home-part__label text-xl leading-5 uppercase  max-md:mb-[1rem] mb-5 max-md:text-[1rem] text-[#7B7B7B]">
+                    class="home-part__label text-xl leading-5 uppercase  max-md:mb-[1rem] mb-5 max-md:text-[1rem] text-navyblue">
                     Investors & Supporters </div>
                 <h2
                     class=" heading home-part__title text-6xl leading-[4rem] max-md:text-[2.5rem] max-md:leading-[3rem]  font-medium capitalize   pb-10">
