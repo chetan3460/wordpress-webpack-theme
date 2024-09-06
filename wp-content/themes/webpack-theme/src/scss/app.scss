@@ -131,7 +131,7 @@ h5 {
   }
   span {
     span {
-      @apply z-10 relative leading-none;
+      @apply z-10 relative leading-6;
     }
   }
   .btn-text {
@@ -814,7 +814,7 @@ body.mobile-tablet-device {
 
 body {
   .default-form {
-    .gform_wrapper.gravity-theme legend {
+    .q456 .gravity-theme legend {
       @apply hidden;
     }
     .gform_wrapper.gravity-theme .ginput_complex input,
@@ -1672,4 +1672,24 @@ $lg-max: ($lg-min - 1); // Large Desktop
 .bg-dark {
   background-color: #111;
   color: #fff;
+}
+
+//clipped-image gradient
+.clipped-image {
+  clip-path: inset(0% 30% 0% 30%);
+}
+
+.clipped-image-gradient {
+  -webkit-mask-image: linear-gradient(transparent, black 85%);
+  mask-image: linear-gradient(transparent, black 85%);
+}
+
+.has-mask-fill > span {
+  position: relative;
+  display: inline;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0.1);
+  -webkit-background-clip: text;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(#fff, #fff);
+  background-size: 0% 100%;
 }

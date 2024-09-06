@@ -30,7 +30,7 @@ if ($counter_group && !$hide_block) :
                         <div class="flex items-center p-2 fade-up-stagger" data-delay="<?php echo $delay ?>">
                             <div class="w-full text-center">
                                 <div class="overflow-hidden ">
-                                    <p class="text-[8em] leading-[1em] -tracking-[0.10em] font-medium -mb-6">
+                                    <p class="text-[8em] leading-[1em] -tracking-[0.04em] font-medium -mb-6">
                                         <?php echo $number; ?>
                                     </p>
                                 </div>

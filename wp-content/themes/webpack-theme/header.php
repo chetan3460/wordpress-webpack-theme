@@ -93,7 +93,7 @@
 
         <!-- header start here -->
         <header class="header dark-mode  w-full z-50 transition-[top] duration-700 mt-3 max-lg:mt-5 fixed group">
-            <div class="max-container header-wrap px-16 max-xl:px-5 pb-10  max-lg:pb-10 max-lg:group-[&.top]:px-0 [clip-path:polygon(0%_100%,100%_100%,100%_100%,0%_100%)]">
+            <div class="max-container header-wrap px-16 max-xl:px-5 pb-10  max-lg:pb-10 max-lg:group-[&.top]:px-0 ">
                 <div class="header-inner relative  py-6 max-lg:py-5 px-7 flex justify-between  ">
                     <div class="overlay-cu lg:block absolute bg-purple/75 backdrop-blur-[10px] backdrop-brightness-[1.2] w-full h-full top-0 left-0 overflow-hidden rounded-none lg:rounded-[10px] -z-10">
 

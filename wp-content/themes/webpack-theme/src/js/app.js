@@ -7,7 +7,8 @@ import Animation from "./components/Animation";
 import { inVP } from "./utils";
 import Lenis from 'lenis'
 import gsap from 'gsap';
-
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import { Linear } from 'gsap';
 import { viewport } from './utils';
 
 export default new (class App {
@@ -341,7 +342,7 @@ export default new (class App {
     // --------header logo
 
 
-    // svg 
+    // 
 
 
     // Window Events

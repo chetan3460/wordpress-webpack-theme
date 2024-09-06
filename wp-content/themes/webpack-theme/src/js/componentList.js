@@ -49,6 +49,12 @@ const partnerSlider = $(".partner-slider");
 // Case Studies Blocks
 const caseStudiesBlockV1 = $(".case-studies-block_v1");
 
+// clipped-content-image-block
+const bannerBlockV2 = $(".banner_block_V2");
+
+// clipped-content-image-block
+const clippedImageBlock = $(".clipped-image-block");
+
 // Threejs
 const lazyModel = $(".lazy-model");
 
@@ -252,6 +258,21 @@ export const componentList = [
   {
     element: caseStudiesBlockV1,
     className: "caseStudiesBlockV1",
+    mobile: true,
+  },
+  {
+    element: clippedImageBlock,
+    className: "ClippedImageBlock",
+    mobile: true,
+  },
+  {
+    element: clippedImageBlock,
+    className: "ClippedImageBlock",
+    mobile: true,
+  },
+  {
+    element: bannerBlockV2,
+    className: "BannerBlockV2",
     mobile: true,
   },
 ];

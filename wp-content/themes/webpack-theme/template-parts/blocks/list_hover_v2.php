@@ -38,14 +38,14 @@ if ($items_v2 && !$hide_block) :
 
                 <?php if ($heading) : ?>
                     <h2
-                        class="text-6xl leading-[4rem] max-md:text-[2.5rem] max-md:leading-[3rem]  font-medium capitalize text-navyblue font-medium">
+                        class="text-6xl leading-[4rem] max-md:text-[2.5rem] max-md:leading-[3rem]  text-navyblue ">
                         <?= $heading; ?></h2>
                 <?php endif; ?>
             </div>
             <?php if ($cta) : ?>
                 <div class="md:mt-0 mt-5">
 
-                    <a href="<?= $cta['url']; ?>" target="<?= $cta_target; ?>" class="primary-btn  white"> <span
+                    <a href="<?= $cta['url']; ?>" target="<?= $cta_target; ?>" class="primary-btn"> <span
                             class="btn-text"><span><?= $cta['title']; ?></span></span> <span class="btn-arrow"> <span
                                 class="icon-arrow-right"></span> </span> </a>
 
@@ -70,7 +70,7 @@ if ($items_v2 && !$hide_block) :
                 }
             ?>
                 <div
-                    class="showcase__item relative flex  lg:flex-row max-lg:flex-col justify-start items-center  py-[0.9em]  px-[3.125%] border-t border-white/20  lg:min-h-[11em] max-sl:min-h-[10em] w-full pointer-events-auto m-0 transition-all duration-700 group ">
+                    class="showcase__item relative flex  lg:flex-row max-lg:flex-col justify-start items-center  py-[0.9em]  px-[3.125%] border-t border-purple/30  lg:min-h-[11em] max-sl:min-h-[10em] w-full pointer-events-auto m-0 transition-all duration-700 group ">
 
                     <?php if ($title || $desc) : ?>
 
@@ -85,7 +85,7 @@ if ($items_v2 && !$hide_block) :
                             <!-- Title -->
                             <?php if ($title) : ?>
                                 <h3
-                                    class="showcase__title || relative   md:flex-row flex-col flex-grow  inline-flex md:items-center items-start md:text-4xl text-[1.7em] leading-[1.25em] tracking-tight font-medium  whitespace-normal lg:pr-[13rem] pr-0 lg:w-1/2 max-lg:w-full  xxl:pb-0 max-lg:pb-4  transform translate-x-0 lg:group-hover:translate-x-[6.5em] group-hover:translate-x-0 lg:group-[&.active]:translate-x-[6.5em] transition-all duration-[0.8s] z-10 ">
+                                    class="showcase__title || relative   md:flex-row flex-col flex-grow  inline-flex md:items-center items-start md:text-4xl text-[1.7em] leading-[1.25em] tracking-tight   whitespace-normal lg:pr-[13rem] pr-0 lg:w-1/2 max-lg:w-full  xxl:pb-0 max-lg:pb-4  transform translate-x-0 lg:group-hover:translate-x-[6.5em] group-hover:translate-x-0 lg:group-[&.active]:translate-x-[6.5em] transition-all duration-[0.8s] z-10 ">
                                     <span
                                         class="showcase__subtitle text-[14px] leading-[1.5em] inline-block relative w-[44px] min-w-fit text-center self-start mr-[24px] px-[6px] py-[3px] border border-navyblue text-navyblue rounded-[30px] transition-all duration-[0.4s] transform translate-y-[0.3em] flex-shrink-0">
                                         0<?= $key + 1; ?></span>
@@ -99,7 +99,7 @@ if ($items_v2 && !$hide_block) :
                                 <div
                                     class="showcase__content overflow-hidden w-[35%] max-lg:w-full text-navyblue max-lg:mb-0 transition-all duration-[0.4s] transform translate-x-0">
                                     <p
-                                        class=" text-base leading-7 max-md:max-w-full    transition-all duration-700 font-medium xxl:pl-0 md:pl-[4.1em] pl-0">
+                                        class=" text-xl leading-7 max-md:max-w-full    transition-all duration-700 font-normal xxl:pl-0 md:pl-[4.1em] pl-0">
                                         <?= $desc; ?></p>
                                 </div>
                             <?php endif; ?>

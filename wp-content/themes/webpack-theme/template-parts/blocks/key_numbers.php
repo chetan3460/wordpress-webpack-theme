@@ -12,7 +12,7 @@ if (($sub_title || $heading) && !$hide_block) :
     <!-- Key Numbers -->
     <section class="py-[6.25rem] px-16 max-xl:px-5 max-md:py-12 number-block-wrap max-container fade-in" style="<?php if ($padding_top) { ?>padding-top: <?= $padding_top ?>px <?php } ?><?php if ($padding_bottom) { ?>padding-bottom: <?= $padding_bottom ?>px <?php } ?>">
         <?php if ($sub_title) : ?>
-            <p class=" text-xl max-md:text-[1rem] leading-5 uppercase mb-5">
+            <p class=" text-base max-md:text-[1rem] leading-5 uppercase mb-5 font-medium text-navyblue tracking-[3.2px]">
                 <?= $sub_title; ?>
             </p>
         <?php endif; ?>

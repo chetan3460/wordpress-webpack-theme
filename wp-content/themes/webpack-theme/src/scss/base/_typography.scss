@@ -9,7 +9,12 @@
   margin: 1em 0 0.5em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: normal;
 }
 
@@ -46,16 +51,19 @@ h6 {
 }
 
 // Others
-p, ul, ol, pre {
+p,
+ul,
+ol,
+pre {
   @extend %block-margins;
 }
 
 p {
-  font-size: mix.em(14);
+  font-size: mix.em(22);
   color: inherit;
   line-height: 1;
 }
 
-p{
+p {
   font-size: mix.rem(16);
 }
