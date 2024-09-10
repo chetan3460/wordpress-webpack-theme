@@ -1,3 +1,11 @@
+
+import gsap from "gsap";
+// import { SplitText } from "gsap/SplitText";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
 export const isInViewport = (element) => {
   if (element.length) {
     let flag = false;
@@ -140,7 +148,17 @@ const device_width = window.innerWidth;
 export { windowOn, larger, xxl, xl, lg, md, sm, device_width };
 
 
-// Three js
+// Three js start
+// let timer;
+
+// return (...args) => {
+//   clearTimeout(timer);
+//   timer = setTimeout(() => {
+//     func.apply(this, args);
+//   }, timeout);
+// };
+
+
 export const detectModelLoad = (modelViewer) => {
   if (!$(modelViewer).length) return;
   if (modelViewer.complete) {
@@ -258,6 +276,9 @@ export const useDebounce = (func, timeout = 500) => {
   };
 }
 
+
+
+// three js end
 
 
 // ----------to be check

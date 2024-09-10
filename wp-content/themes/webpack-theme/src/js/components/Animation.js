@@ -23,7 +23,6 @@ export default class Animation {
     this.fadeUpAnimation();
     this.fadeUpStagger();
     this.parallaxAnimation();
-    this.fadeInLeft();
     this.animateImage();
 
 
@@ -176,29 +175,7 @@ export default class Animation {
     };
   }
 
-  //Fade in Left Animation
-  fadeInLeft = () => {
-    // Get Device width
-    if (device_width > sm) {
-      gsap.set(".bdFadeLeft", { x: -80, opacity: 0 });
-      const fadeArray = gsap.utils.toArray(".bdFadeLeft")
-      fadeArray.forEach((item, i) => {
-        let fadeTl = gsap.timeline({
-          scrollTrigger: {
-            trigger: item,
-            start: "top center+=200",
-          }
-        })
-        fadeTl.to(item, {
-          x: 0,
-          opacity: 1,
-          ease: "power2.out",
-          duration: 1,
-        })
-      })
-    }
 
-  };
 
 
 }

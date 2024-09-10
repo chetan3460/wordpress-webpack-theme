@@ -1,6 +1,7 @@
 @forward "../../node_modules/swiper/swiper-bundle.min.css";
 @use "./mixins/" as mix;
 @forward "base";
+@forward "threejs";
 
 // Tailwind if needed
 @tailwind base;
@@ -1004,44 +1005,6 @@ $container-width: 192rem; //resolve in 192x12.5px(fontsize) = 2400px
   .line {
     opacity: 1;
     transform: unset;
-  }
-}
-// webgl
-#webgi-canvas {
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-#webgi-canvas-container {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: -1;
-  // z-index: 999999;
-  // transform: scale(1.2);
-
-  model-viewer,
-  canvas {
-    opacity: 0;
-    position: absolute;
-  }
-
-  &:after {
-    // display: none;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 5;
-    // background: linear-gradient(180deg, #1c1c1c 0%, #000 100%);
-    background: rgb(0 0 0 / 50%);
-    // opacity: 0.5;
   }
 }
 

@@ -15,6 +15,7 @@
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/preset-env": "^7.21.4",
     "@sass-collective/strip-unit": "^3.1.2",
+    
     "babel-loader": "^9.1.2",
     "clean-webpack-plugin": "^4.0.0",
     "compression-webpack-plugin": "^10.0.0",
@@ -39,7 +40,7 @@
     "webpack-hot-middleware": "^2.26.1",
     "webpack-remove-empty-scripts": "^1.0.3",
     "webgi": "https://dist.pixotronics.com/webgi/runtime/bundle-0.9.15.tgz",
-	"@types/webgi": "https://dist.pixotronics.com/webgi/runtime/bundle-types-0.9.15.tgz"
+	  "@types/webgi": "https://dist.pixotronics.com/webgi/runtime/bundle-types-0.9.15.tgz"
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.18.6",

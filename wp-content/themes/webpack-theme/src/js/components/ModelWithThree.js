@@ -14,7 +14,8 @@ export default class ModelWithThree {
     }
 
     init = () => {
-        const modelViewer = new URL(`${CCM_APPLICATION_URL}/application/themes/nbk_wealth/assets/3d/NBK-TT-new.glb`, import.meta.url)
+        const modelViewer = new URL(`${themeUrl}/assets/3d/NBK-TT-new.glb`, import.meta.url)
+        // modelViewer.src = themeUrl + "/src/js/libs/model-viewer.min.js";
 
         ///////////////////////////////////////////////
 

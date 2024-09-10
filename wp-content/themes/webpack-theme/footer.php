@@ -269,6 +269,10 @@
     ?>
 
 
+    <script type="text/javascript">
+        var themeUrl = "<?php echo esc_url(get_template_directory_uri()); ?>";
+        // console.log(themeUrl)
+    </script>
 
     </body>
 

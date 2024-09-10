@@ -4,12 +4,14 @@ import BlockMain from "./Blocks/BlockMain";
 import DynamicImports from './components/DynamicImports';
 import Animation from "./components/Animation";
 
-import { inVP } from "./utils";
+import { inVP, detectModelLoad } from "./utils";
 import Lenis from 'lenis'
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { Linear } from 'gsap';
 import { viewport } from './utils';
+
+import SiteLoader from "./components/SiteLoader";
 
 export default new (class App {
   constructor() {
@@ -32,6 +34,20 @@ export default new (class App {
   };
 
   initComponents = () => {
+    new SiteLoader();
+    // Model Three JS
+    if (this.modelViewer.length) {
+
+      this.loadModelViewer();
+      if (this.homePage.length) {
+        window.scroll({
+          top: 0,
+          left: 0,
+          behavior: "smooth",
+        });
+      }
+    }
+
     new Header({
       header: this.header,
       htmlBody: this.htmlBody,
@@ -44,7 +60,6 @@ export default new (class App {
     }
 
     new BlockMain();
-
     new DynamicImports();
     new Animation();
 
@@ -76,20 +91,23 @@ export default new (class App {
       }
     }
     wglShowcaseInit();
-
   };
-  // loadModelViewer = () => {
-  //   if (!this.loaded) {
-  //     const modelViewer = document.createElement("script");
-  //     modelViewer.type = "module";
-  //     modelViewer.defer = "defer";
-  //     modelViewer.src =
-  //       CCM_APPLICATION_URL +
-  //       "/application/themes/nbk_wealth/src/js/libs/model-viewer.min.js";
-  //     this.htmlBody[0].appendChild(modelViewer);
-  //     this.loaded = true;
-  //   }
-  // };
+
+  loadModelViewer = () => {
+    if (!this.loaded) {
+      const modelViewer = document.createElement("script");
+      modelViewer.type = "module";
+      modelViewer.defer = "defer";
+      // modelViewer.src =
+      //   CCM_APPLICATION_URL +
+      //   "/themes/webpack-theme/src/js/libs/model-viewer.min.js";
+      // Use the dynamically retrieved theme URL
+      modelViewer.src = themeUrl + "/src/js/libs/model-viewer.min.js";
+
+      this.htmlBody[0].appendChild(modelViewer);
+      this.loaded = true;
+    }
+  };
   captchaLoad = () => {
     $(window).on("scroll load", () => {
       if (inVP(this.formidable) && !this.formidable.hasClass("formInview")) {
@@ -99,6 +117,8 @@ export default new (class App {
   };
 
   setDomMap = () => {
+    this.siteLoader = $(".site-loader");
+
     this.window = $(window);
     this.htmlNbody = $('body, html');
     this.html = $('html');
@@ -117,6 +137,11 @@ export default new (class App {
     this.searchBtn = $('.search-btn');
     this.searchTopBlock = $('.search-top-block');
     this.searchCloseBtn = $('.search-top-block .close-btn');
+    // three js
+    this.modelViewer = $("model-viewer");
+    this.homePage = $(".page-template-template-creative");
+
+
   };
 
   bindEvents = () => {
@@ -433,11 +458,11 @@ export default new (class App {
       calculate()
     })
     // Threejs
-    // if (this.modelViewer.length) {
-    //   this.modelViewer.each((_, el) => {
-    //     detectModelLoad(el);
-    //   });
-    // }
+    if (this.modelViewer.length) {
+      this.modelViewer.each((_, el) => {
+        detectModelLoad(el);
+      });
+    }
 
   };
 
@@ -454,6 +479,22 @@ export default new (class App {
   };
 
 
+  // windowScroll = () => {
+  //   // Model
+  //   if (this.modelViewer.length) {
+  //     this.modelViewer.each((_, el) => {
+  //       if (el.matches(".model-loaded.model-rotate-trigger")) {
+  //         if (inVP($(el))) {
+  //           el.autoRotate = true;
+  //           el.classList.add("rotating");
+  //         } else {
+  //           el.autoRotate = false;
+  //           el.classList.remove("rotating");
+  //         }
+  //       }
+  //     });
+  //   }
+  // }
 
   // To be use if necessary on scroll show/hide header
 
@@ -481,22 +522,24 @@ export default new (class App {
   //   );
 
 
+  windowScroll = () => {
 
-  //   // Threejs
-  //   // if (this.modelViewer.length) {
-  //   //   this.modelViewer.each((_, el) => {
-  //   //     if (el.matches(".model-loaded.model-rotate-trigger")) {
-  //   //       if (inVP($(el))) {
-  //   //         el.autoRotate = true;
-  //   //         el.classList.add("rotating");
-  //   //       } else {
-  //   //         el.autoRotate = false;
-  //   //         el.classList.remove("rotating");
-  //   //       }
-  //   //     }
-  //   //   });
-  //   // }
-  // };
+
+    if (this.modelViewer.length) {
+      this.modelViewer.each((_, el) => {
+        if (el.matches(".model-loaded.model-rotate-trigger")) {
+          if (inVP($(el))) {
+            el.autoRotate = true;
+            el.classList.add("rotating");
+          } else {
+            el.autoRotate = false;
+            el.classList.remove("rotating");
+          }
+        }
+      });
+    }
+  };
+
 
   handleSplashScreen() {
     this.htmlBody.find('.logo-middle').fadeIn(500);
